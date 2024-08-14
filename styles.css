@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #f0f0f0;  
+    --secondary-color: #333; 
+    --background-color: #f0f0f0;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+
+section {
+    flex: 1;
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
