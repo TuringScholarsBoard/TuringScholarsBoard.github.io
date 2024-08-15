@@ -1,0 +1,21 @@
+.sponsor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor img {
+    max-width: 150px;
+    margin-right: 1em;
+    max-height: 50px;
+}
+
+.sponsor p {
+    margin: 0;
+    font-size: 1.1em;
+}
