@@ -67,7 +67,7 @@ nav a:hover {
 
 .cta {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--primary-color);
     padding: 0.75em 1.5em;
     text-transform: uppercase;
     font-weight: bold;
