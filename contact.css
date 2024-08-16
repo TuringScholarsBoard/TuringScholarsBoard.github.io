@@ -7,11 +7,12 @@
     display: flex;
     align-items: center;
     width: 50%;
-    transform: translate(50%)
+    transform: translate(50%);
 }
 
 .boardmember {
     flex: 1;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: white;
@@ -19,6 +20,13 @@
     padding: 1em;
     margin-bottom: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boardmember img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10%;
+    margin-right: 15px;
 }
 
 .boardmember p {
@@ -34,4 +42,3 @@
 .boardmember:first-child {
     margin-right: 20px;
 }
-
