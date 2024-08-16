@@ -1,0 +1,37 @@
+.cochairs {
+    display: flex;
+    flex-direction: row;
+}
+
+.chair {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    transform: translate(50%)
+}
+
+.boardmember {
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boardmember p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.boardmember a {
+    color: black;
+    text-decoration: none;
+}
+
+.boardmember:first-child {
+    margin-right: 20px;
+}
+
