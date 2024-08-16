@@ -1,0 +1,23 @@
+.centered-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px; 
+}
+
+.centered-link li {
+    list-style: none;
+}
+
+.centered-link a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em; 
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.centered-link a:hover {
+    text-decoration: none;
+    font-size: 1.5em; 
+    color:var(--secondary-color);
+}
