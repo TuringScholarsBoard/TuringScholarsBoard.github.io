@@ -1,0 +1,49 @@
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.25em;
+    margin-bottom: 1.5em;
+}
+
+.cta {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.75em 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: var(--accent-color);
+}
+
+section {
+    flex: 1;
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 0 1em;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}

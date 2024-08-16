@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #282c34;
+    --secondary-color: #ebb01a;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --accent-color: rgb(161, 111, 2);
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer {
+    padding: 1em;
+    text-align: center;
+}

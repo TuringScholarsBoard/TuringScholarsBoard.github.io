@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digits</title>
+  <link rel="stylesheet" href="digits.css">
+  <link rel="stylesheet" href="digits.css">
+  <link rel="icon" href="digits.png" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <h1 style = "text-decoration: underline;">Digits</h1>
+    <nav>
+        <ul>
+            <!-- <li class="header-link"><a href="index.html">main page</a></li> -->
+        </ul>
+    </nav>
+</header>
+<section class="small-space"></section>
+  <div class="target"><span id="targetNumber"></span></div>
+
+  <div class="container">
+    <button class="button number" onclick="selectButton(this)">1</button>
+    <button class="button number" onclick="selectButton(this)">2</button>
+    <button class="button number" onclick="selectButton(this)">3</button>
+    <button class="button number" onclick="selectButton(this)">4</button>
+    <button class="button number" onclick="selectButton(this)">5</button>
+    <button class="button number" onclick="selectButton(this)">6</button>
+  </div>
+  <section class="small-space"></section>
+  <div class="operations container">
+    <button class="button operation selected" onclick="selectOperation('+')">+</button>
+    <button class="button operation" onclick="selectOperation('-')">-</button>
+    <button class="button operation" onclick="selectOperation('*')">*</button>
+    <button class="button reset" onclick="resetButtons()">↺</button>
+    <button class="button operation" onclick="selectOperation('/')">/</button>
+    <button class="button reset" onclick="resetPuzzle()">➡</button>
+  </div>
+  <script src="digits.js"></script>
+  <section class="small-space"></section>
+  <div class="counter">Puzzles Solved: <span id="counter"></span></div>
+  <div class="grid-container" id="gridContainer"></div>
+  <div class="grid-container" id="gridContainer2"></div>
+  <section class="small-space"></section>
+  <footer>
+    <p>&copy; 2024 Cooper Wilk</p>
+</footer>
+</body>
+</html>
