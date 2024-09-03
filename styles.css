@@ -103,4 +103,77 @@ footer {
     color: white;
     padding: 1em;
     text-align: center;
+    margin-top: auto; 
+}
+
+
+.centered-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    gap: 1em;
+}
+
+.centered-link li {
+    list-style: none;
+}
+
+.centered-link a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em; 
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.centered-link a:hover {
+    text-decoration: none;
+    font-size: 1.5em; 
+    color:var(--secondary-color);
+}
+
+/* Ensure the nav links wrap onto a new line if needed */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping */
+    justify-content: center;
+    gap: 1em;
+}
+
+nav li {
+    flex: 1 1 auto; /* Allow items to shrink and grow */
+    text-align: center; /* Center each item */
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 0.5em; /* Add padding to increase click area */
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Adjust spacing for smaller screens */
+@media (max-width: 600px) {
+    nav ul {
+        gap: 0.5em; /* Reduce the gap between items on small screens */
+    }
+
+    nav li {
+        flex: 1 1 30%; /* Each item takes full width, stacking vertically if needed */
+    }
+
+    nav a {
+        font-size: 1em; /* Adjust font size for readability on smaller screens */
+        padding: 0.75em; /* Ensure the links remain easily clickable */
+    }
 }
