@@ -4,6 +4,7 @@
     --background-color: #f5f5f5;
     --text-color: #333;
     --accent-color: rgb(161, 111, 2);
+    --link-color: #2b5ca7;
 }
 
 body {
@@ -124,7 +125,7 @@ footer {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5em; 
-    color: var(--primary-color);
+    color: var(--link-color);
     transition: color 0.3s ease;
 }
 

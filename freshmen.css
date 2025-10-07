@@ -22,6 +22,10 @@
 }
 
 .box a {
-    color: black;
+    color: --link-color;
     text-decoration: none;
+}
+
+.box a:hover {
+    text-decoration: underline;
 }
