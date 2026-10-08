@@ -1,49 +1,171 @@
-.hero {
-    max-width: 800px;
+/* There is no documentation on how to change the CSS files to be better. These things are
+beasts of god that should not be tampered with... just paste the whole thing into an LLM and pray
+Why did nobody install tailwind? */
+
+
+/* =========================================================
+   FONTS  (files in assets/fonts/ — edit file names if yours differ)
+   ========================================================= */
+
+/* ---------- HERO ---------- */
+.landing {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 6rem var(--page-gutter) 3rem;
+    overflow: hidden;
+    color: var(--white);
+}
+
+/* Keep the navbar above every section, including its shadow. */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.landing_bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.landing_bg--hidden {
+    opacity: 0;
+}
+
+/* Allow content to grow beyond one screen on smaller devices. */
+main > .band {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+}
+
+main > .band > .container {
+    width: 100%;
+}
+
+/* navy overlay at 50% opacity */
+.landing::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgb(8 46 104 / 50%);
+}
+
+.landing_content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--content-width);
     margin: 0 auto;
-    padding: 2em;
-    text-align: center;
 }
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
+.landing_title {
+    max-width: 11em;
+    margin: 0 0 0.75rem;
 }
 
-.hero p {
-    font-size: 1.25em;
-    margin-bottom: 1.5em;
+.landing_subtitle {
+    max-width: 22rem;
+    font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+    line-height: 1.5;
 }
 
-.cta {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 0.75em 1.5em;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+/* Homepage spacing and equal-width split-section buttons. */
+main > .band .section-title {
+    margin-bottom: 1.25rem;
 }
 
-.cta:hover {
-    background-color: var(--accent-color);
+#events .split__text > .btn {
+    width: 100%;
 }
 
-section {
-    flex: 1;
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 0 1em;
-    text-align: center;
+/* JavaScript groups text by its rendered lines and staggers each reveal. */
+.reveal-line {
+    display: block;
 }
 
-section h2 {
-    font-size: 2em;
-    margin-bottom: 1em;
+.reveal-item {
+    opacity: 0;
 }
 
-section p {
-    font-size: 1.1em;
-    line-height: 1.6;
+.is-visible .reveal-item {
+    animation: fade-in-up 0.4s ease-out both;
+    animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-item {
+        opacity: 1;
+        animation: none !important;
+    }
+}
+
+/* ---------- SPONSORS ---------- */
+.sponsors__subtitle {
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+}
+
+.sponsors__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 2.5vw, 1.75rem);
+    margin: 1.75rem auto 1.5rem;
+}
+
+.sponsor-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 8 / 7;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: var(--radius);
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ---------- CONTACT ---------- */
+.contact__content {
+    margin-top: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__bg {
+        transition: none;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 640px) {
+    .sponsors__grid {
+        grid-template-columns: 1fr;
+        max-width: 18rem;
+    }
 }

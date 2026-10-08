@@ -1,179 +1,308 @@
+/* =========================================================
+   styles.css — SHARED BASE STYLES FOR EVERY PAGE
+   Load this FIRST, then the page's own css (index.css, about.css, ...)
+   so page-specific rules can override the base.
+   Font urls are relative to THIS file, so they work from any folder.
+   ========================================================= */
+
+/* ---------- FONTS (edit file names to match assets/fonts/) ---------- */
+@font-face {
+    font-family: "Lucidity Expand";
+    src: url("assets/fonts/LucidityExpand.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("assets/fonts/RobotoMono-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mina";
+    src: url("assets/fonts/Mina-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---------- DESIGN TOKENS ---------- */
 :root {
-    --primary-color: #282c34;
-    --secondary-color: #ebb01a;
-    --background-color: #f5f5f5;
-    --text-color: #333;
-    --accent-color: rgb(161, 111, 2);
+    --navy: #082e68;              /* contact bg, text on white */
+    --navbar-blue: #6593da;       /* navbar */
+    --sponsors-blue: #4371b8;     /* blue section bg */
+    --button-teal: #005f86;       /* button bg */
+    --white: #ffffff;
+
+    --font-title: "Lucidity Expand", "Arial Black", sans-serif;
+    --font-heading: "Roboto Mono", ui-monospace, monospace;
+    --font-body: "Mina", system-ui, sans-serif;
+
+    --content-width: 68rem;
+    --page-gutter: clamp(1.25rem, 6vw, 4rem);
+    --radius: 0.5rem;
+}
+
+/* ---------- BASE ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Courier New', monospace;
     margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--navy);
+    background: var(--white);
+    line-height: 1.5;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2em 0;
-    text-align: center;
-    position: relative;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+p {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    position: absolute;
-    top: 1em;
-    right: 2em;
 }
 
-nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+a:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
 }
 
-nav a:hover {
-    color: var(--accent-color);
+/* ---------- TYPE ---------- */
+.section-title {
+    margin: 0 0 0.25rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+    line-height: 1.15;
 }
 
-.hero {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2em;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-}
-
-.hero p {
-    font-size: 1.25em;
-    margin-bottom: 1.5em;
-}
-
-.cta {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 0.75em 1.5em;
+.page-title {
+    margin: 0;
+    font-family: var(--font-title);
+    font-weight: normal;
+    font-size: clamp(1.75rem, 4.6vw, 3.5rem);
+    line-height: 1.1;
     text-transform: uppercase;
-    font-weight: bold;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- NAVBAR ----------
+   Stays at the top while scrolling. The homepage overlays its hero. */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem var(--page-gutter);
+    background-color: var(--navbar-blue);
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 0.4rem 0.25rem rgb(8 46 104 / 50%);
+}
+
+.nav__logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav__logo img {
+    height: 1.75rem;
+    width: auto;
+}
+
+.nav__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: clamp(0.9rem, 2.4vw, 2rem);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__links a {
+    padding-bottom: 0.15rem;
+    font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+    color: var(--white);
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
 }
 
-.cta:hover {
-    background-color: var(--accent-color);
+/* current page: add aria-current="page" to its link */
+.nav__links a:hover,
+.nav__links a[aria-current="page"] {
+    border-bottom-color: var(--white);
 }
 
-section {
-    flex: 1;
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 0 1em;
+/* ---------- PAGE HEADER (inner pages: title banner under the nav) ---------- */
+.page-header {
+    padding: clamp(2rem, 6vw, 4rem) var(--page-gutter);
+    color: var(--white);
+    background: var(--navy);
+}
+
+.page-header > * {
+    max-width: var(--content-width);
+    margin-inline: auto;
+}
+
+/* ---------- BANDS (full-width sections) ----------
+   <section class="band"> white · .band--blue · .band--navy
+   Put a .container inside to center + limit the width. */
+.band {
+    padding: clamp(2rem, 5vw, 3.5rem) var(--page-gutter);
+}
+
+.band--blue,
+.band--navy {
+    color: var(--white);
     text-align: center;
 }
 
-section h2 {
-    font-size: 2em;
-    margin-bottom: 1em;
+.band--blue {
+    background: var(--sponsors-blue);
 }
 
-section p {
-    font-size: 1.1em;
-    line-height: 1.6;
+.band--navy {
+    background: var(--navy);
 }
 
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1em;
-    text-align: center;
-    margin-top: auto; 
+.container {
+    max-width: var(--content-width);
+    margin-inline: auto;
 }
 
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+    padding: 0.7rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--white);
+    background: var(--button-teal);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: filter 0.2s ease;
+}
 
-.centered-link {
+.btn:hover {
+    filter: brightness(1.15);
+}
+
+/* white button for blue/navy bands */
+.btn--light {
+    color: var(--sponsors-blue);
+    background: var(--white);
+}
+
+.btn--light:hover {
+    filter: brightness(0.94);
+}
+
+/* ---------- SPLIT (text + photo, two columns) ----------
+   <div class="container split"> text + figure, either order in HTML.
+   Add .split--reverse for the right-aligned text version. */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    align-items: stretch;
+}
+
+.split__text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    gap: 1em;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.centered-link li {
-    list-style: none;
+.split__text p {
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
 }
 
-.centered-link a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5em; 
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-}
-
-.centered-link a:hover {
-    text-decoration: none;
-    font-size: 1.5em; 
-    color:var(--secondary-color);
-}
-
-/* Ensure the nav links wrap onto a new line if needed */
-nav ul {
-    list-style: none;
-    padding: 0;
+.split__figure {
     margin: 0;
-    display: flex;
-    flex-wrap: wrap; /* Enable wrapping */
-    justify-content: center;
-    gap: 1em;
 }
 
-nav li {
-    flex: 1 1 auto; /* Allow items to shrink and grow */
-    text-align: center; /* Center each item */
+.split__figure img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
 }
 
-nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-    padding: 0.5em; /* Add padding to increase click area */
+.split__figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    text-align: right;
 }
 
-nav a:hover {
-    color: var(--accent-color);
+.split--reverse .split__text {
+    align-items: flex-end;
+    text-align: right;
 }
 
-/* Adjust spacing for smaller screens */
-@media (max-width: 600px) {
-    nav ul {
-        gap: 0.5em; /* Reduce the gap between items on small screens */
+.split--reverse .split__figure figcaption {
+    text-align: left;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 640px) {
+    .split {
+        grid-template-columns: 1fr;
     }
 
-    nav li {
-        flex: 1 1 30%; /* Each item takes full width, stacking vertically if needed */
+    .split__figure {
+        order: -1;
     }
 
-    nav a {
-        font-size: 1em; /* Adjust font size for readability on smaller screens */
-        padding: 0.75em; /* Ensure the links remain easily clickable */
+    .split--reverse .split__text {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .split--reverse .split__figure figcaption {
+        text-align: right;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding-block: 0.7rem;
+    }
+
+    .nav__logo img {
+        height: 1.4rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .btn,
+    .nav__links a {
+        transition: none;
     }
 }

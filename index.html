@@ -3,39 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>TSSA</title>
+    <title>Turing Scholars Student Association</title>
     <link rel="icon" href="icon.png" type="image/x-icon" />
+
+    <!-- styles.css has the styles for all, index.css has only homepage stuff -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects/projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="freshmen.html">Freshmen</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Turing Scholars</h1>
-            <p>Welcome to the TSSA landing page</p>
-            <a href="about.html" class="cta">Learn More</a>
+
+    <!-- 
+         every image is a normal <img src="..."> and every button is
+         a normal <a href="..."> so just edit the paths below to change stuff
+          -->
+
+    <!-- navbar -->
+    <nav class="nav" aria-label="Main navigation">
+        <a class="nav__logo" href="index.html">
+            <!-- logo image -->
+            <img src="assets/photos/tssa_sticker_blue.png" alt="TSSA logo">
+        </a>
+        <ul class="nav__links">
+            <li><a href="about/about.html">About Us</a></li>
+            <li><a href="sponsors/sponsors.html">Sponsors</a></li>
+            <li><a href="events/events.html">Events</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="landing">
+        <!-- The slideshow uses this image as its first frame. -->
+        <img class="landing_bg" src="assets/photos/banner_photos/webp/1.webp" alt="Turing Scholars members at student events">
+
+        <div class="landing_content">
+            <h1 class="page-title landing_title">Turing Scholars Student Association</h1>
+            <p class="landing_subtitle">
+                The official student organization for the Turing Scholars honors program at the University of Texas at Austin
+            </p>
         </div>
     </header>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to the TSSA GitHub.</p>
-        <p>Explore our projects and contributions to the community.</p>
-        <div class="centered-link">
-            <li><a href="https://github.com/TuringScholarsBoard/TuringScholarsBoard.github.io">Contribute to Github</a></li>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 TSSA</p>
-    </footer>
+
+    <main>
+
+        <!-- About Us section -->
+        <section id="about" class="band">
+            <div class="container split">
+                <div class="split__text">
+                    <div>
+                        <h2 class="section-title">About Us</h2>
+                        <!-- about us description text -->
+                        <p>The Turing Scholars Student Association (TSSA) is a student-led organization 
+                            dedicated to building a welcoming and connected community within UT Austin’s 
+                            Turing Scholars program. Through social events, professional development 
+                            opportunities, and student-led initiatives, we bring together students who 
+                            share a passion for computer science. Our goal is to foster meaningful friendships,
+                             encourage collaboration, and help every Turing Scholar make the most of their 
+                             college experience.</p>
+                    </div>
+                    <!-- about us button link -->
+                    <a class="btn" href="about/about.html">Learn More</a>
+                </div>
+
+                <figure class="split__figure">
+                    <!-- about image -->
+                    <img src="assets/photos/regular_photos/about_us.jpg" alt="2025 board members having Asian barbeque together">
+                    <figcaption>2025 Board members having asian barbeque together</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- sponsors section (tbd) -->
+        <section id="sponsors" class="band band--blue sponsors">
+            <div class="container">
+                <h2 class="section-title">Our Sponsors</h2>
+                <p class="sponsors__subtitle">We are incredibly grateful for the support we recieve</p>
+
+                <div class="sponsors__grid">
+                    <!-- SPONSOR 1: change href to the sponsor's site and src to their logo -->
+                    <a class="sponsor-card" href="#" target="_blank" rel="noopener">
+                        <img src="assets/images/sponsor-1.png" alt="Sponsor 1 logo">
+                    </a>
+                    <!-- SPONSOR 2 -->
+                    <a class="sponsor-card" href="#" target="_blank" rel="noopener">
+                        <img src="assets/images/sponsor-2.png" alt="Sponsor 2 logo">
+                    </a>
+                    <!-- SPONSOR 3 -->
+                    <a class="sponsor-card" href="#" target="_blank" rel="noopener">
+                        <img src="assets/images/sponsor-3.png" alt="Sponsor 3 logo">
+                    </a>
+                </div>
+
+                <!-- sponsors button link -->
+                <a class="btn btn--light" href="sponsors/sponsors.html">Learn More</a>
+            </div>
+        </section>
+
+        <!-- events -->
+        <section id="events" class="band">
+            <div class="container split split--reverse">
+                <figure class="split__figure">
+                    <!-- events image link -->
+                    <img src="assets/photos/regular_photos/events.png" alt="Turing Scholars kayaking on the river">
+                    <figcaption>2026 Turing scholars enjoy our annual Kayaking kickoff</figcaption>
+                </figure>
+
+                <div class="split__text">
+                    <div>
+                        <h2 class="section-title">Events</h2>
+                        <!-- events discription -->
+                        <p>Throughout the year, TSSA organizes a wide range of events to
+                             help Turing Scholars connect with one another outside of 
+                             the classroom. From social events and fun activities to company-sponsored events, 
+                            there's always something going on! The goal is to create an environment to meet people across
+                             different class years, get to know the Turing community, and take a break from the usual coursework.</p>
+                    </div>
+                    <!-- events button link -->
+                    <a class="btn" href="events/events.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact us section (tbd) -->
+        <section id="contact" class="band band--navy contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p>Want to contact us?</p>
+
+                <!-- tbd -->
+                <div class="contact__content"></div>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>

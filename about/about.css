@@ -1,0 +1,90 @@
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    max-width: 1000px;
+    margin: 0 auto 3em;
+    padding: 0 1em;
+}
+
+main h2 {
+    max-width: 1000px;
+    margin: 1.5em auto 0.5em;
+    padding: 0 1em;
+    font-size: 2.5em;
+    animation: fadeInUp 0.6s ease-out both;   /* adjust to taste */
+}
+
+.boardmember {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    column-gap: 16px;
+    background-color: white;
+    border: 1px solid #a0aab4;
+    border-radius: 20px;
+    padding: 1.2em;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.boardmember img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   /* name/title on top, grad/email at bottom */
+}
+
+.boardmember p,
+.boardmember h3 {
+    margin: 0;
+}
+
+.name {
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.title {
+    color: #9aa8b5;
+    font-weight: bold;
+}
+
+.grad {
+    font-weight: bold;
+}
+
+.boardmember a {
+    color: black;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.description {
+    grid-column: 1 / -1;              
+    margin-top: 0.8em !important;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 700px) {
+    .board-grid { grid-template-columns: 1fr; }
+}
+
+/* some people turn off animations on their OS *cough cough linux* so we add this flag */
+@media (prefers-reduced-motion: reduce) {
+    .boardmember { animation: none; }
+}

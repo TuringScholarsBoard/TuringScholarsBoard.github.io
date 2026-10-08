@@ -1,0 +1,82 @@
+[
+    {
+    "position": "President",
+    "name": "Michael Peng",
+    "email": "jane.doe@example.com",
+    "headshot": "/photos/board_headshots/michael_peng.png",
+    "description": "Description",
+    "graduatingYear": 2026,
+    "current": true
+    },
+
+    {
+    "position": "Corporate Representative",
+    "name": "Joyce Zheng",
+    "email": "jane.doe@example.com",
+    "headshot": "/photos/board_headshots/joyce_zheng.png",
+    "description": "Description",
+    "graduatingYear": 2028,
+    "current": true
+    },
+
+    {
+    "position": "Corporate Representative",
+    "name": "Saffron Liu",
+    "email": "saffron.liu@utexas.edu",
+    "headshot": "/photos/board_headshots/saffron_liu.jpeg",
+    "description": "Description",
+    "graduatingYear": 2028,
+    "current": true
+    },
+
+    {
+    "position": "Social Chair",
+    "name": "Ella Whitney",
+    "email": "ella.whitney@utexas.edu",
+    "headshot": "/photos/board_headshots/ella_whitney.jpeg",
+    "description": "Description",
+    "graduatingYear": 2028,
+    "current": true
+    },
+
+    {
+    "position": "Social Chair",
+    "name": "Jiaying Song",
+    "email": "song.jiaying@utexas.edu",
+    "headshot": "/photos/board_headshots/jiaying_song.jpeg",
+    "description": "Description",
+    "graduatingYear": 2028,
+    "current": true
+    },
+
+    {
+    "position": "Research Chair",
+    "name": "Harshal Bharatia",
+    "email": "harshal.bharatia@utexas.edu",
+    "headshot": "/photos/board_headshots/harshal_bharatia.jpeg",
+    "description": "Description",
+    "graduatingYear": 2027,
+    "current": true
+    },
+
+
+    {
+    "position": "Past Board Member",
+    "name": "Christopher Hill",
+    "email": "christopher.hill@utexas.edu",
+    "headshot": "/photos/board_headshots/christopher_hill.jpg",
+    "description": "Description",
+    "graduatingYear": 2026,
+    "current": false
+    },
+
+    {
+    "position": "Past Board Member",
+    "name": "Yu Lim",
+    "email": "yulim@utexas.edu",
+    "headshot": "/photos/board_headshots/yu_lim.jpg",
+    "description": "Description",
+    "graduatingYear": 2026,
+    "current": false
+    }
+]

@@ -1,0 +1,212 @@
+[
+    {
+    "name": "Jane Street",
+    "logo": "/logos/jane_street.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing+",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+    ]
+    },
+
+    {
+    "name": "BAM",
+    "logo": "/logos/bam.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+
+    ]
+    },
+
+    {
+    "name": "Citadel",
+    "logo": "/logos/citadel.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "HRT",
+    "logo": "/logos/hrt.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "Citadel",
+    "logo": "/logos/citadel.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "Optiver",
+    "logo": "/logos/optiver.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "Roblox",
+    "logo": "/logos/roblox.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "Snowflake",
+    "logo": "/logos/snowflake.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "Virtu Financial",
+    "logo": "/logos/virtu.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "The D.E. Shaw Group",
+    "logo": "/logos/deshaw.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Turing",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "Cloudflare",
+    "logo": "/logos/cloudflare.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Dijkstra",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "Bloomberg",
+    "logo": "/logos/bloomberg.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Dijkstra",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "Data Dog",
+    "logo": "/logos/datadog.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Past Sponsors",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    },
+
+    {
+    "name": "IMC Trading",
+    "logo": "/logos/imc.png",
+    "sponsorship": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31"
+    },
+    "tier": "Past Sponsors",
+    "description": "",
+    "gallery": [
+        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
+        
+    ]
+    }
+
+    
+]

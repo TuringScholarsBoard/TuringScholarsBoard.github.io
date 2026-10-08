@@ -1,0 +1,32 @@
+[
+    {
+    "name": "Kayaking Social",
+    "location": "Texas Rowing Center",
+    "address": "1541 W Cesar Chavez St, Austin, TX 78703",
+    "description": "Description",
+    "gallery": [
+        "/photos/event_gallery/"
+    ]
+    },
+
+    {
+    "name": "Poker Social",
+    "location": "Gates Dell Complex",
+    "address": "2317 Speedway, Austin, TX 78712",
+    "description": "Description",
+    "gallery": [
+        "/photos/event_gallery/"
+    ]
+    },
+
+    {
+    "name": "Lightning Talks",
+    "location": "Gates Dell Complex",
+    "address": "2317 Speedway, Austin, TX 78712",
+    "description": "Description",
+    "gallery": [
+        "/photos/event_gallery/"
+    ]
+    }
+
+]
