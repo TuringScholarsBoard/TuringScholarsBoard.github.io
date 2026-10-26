@@ -1,3 +1,5 @@
+//index.js
+
 // the banner folder contains 1.webp through 50.webp, please change length manually
 const bannerPhotos = Array.from({ length: 50 }, (_, index) =>
     `assets/photos/banner_photos/webp/${index + 1}.webp`

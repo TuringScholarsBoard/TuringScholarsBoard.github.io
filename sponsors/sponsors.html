@@ -3,112 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="sponsors.css">
-    <title>Turing Scholars Sponsors</title>
-    <link rel="icon" href="icon.png" type="image/x-icon" />
+    <title>Sponsors | TSSA</title>
+    <link rel="icon" href="/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/sponsors/sponsors.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects/projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="freshmen.html">Freshmen</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Sponsors</h1>
-        </div>
+    <nav class="nav" aria-label="Main navigation">
+        <a class="nav__logo" href="/index.html">
+            <img src="/assets/photos/tssa_sticker_blue.png" alt="TSSA logo">
+        </a>
+        <ul class="nav__links">
+            <li><a href= "/index.html">Home</a></li>
+            <li><a href="/about/about.html">About Us</a></li>
+            <li><a href="/TSSA/TSSA.html">TSSA</a></li>
+            <li><a href="/sponsors/sponsors.html" aria-current="page">Sponsors</a></li>
+            <li><a href="/events/events.html">Events</a></li>
+            <li><a href="/resources/resources.html">Resources</a></li>
+            <li><a href="/index.html#contact">Contact</a></li>
+            
+        </ul>
+    </nav>
+
+    <header class="sponsors-hero">
+        <h1 class="page-title" data-lines>Sponsors</h1>
+        <p data-lines data-delay="0.15">
+            The TSSA extremely grateful to generous sponsors, which support the organization in exchange for the ability to hold private recruiting events with Turing Scholars.
+        </p>
     </header>
+
     <main>
-        <section id="turing-plus">
-            <h2>Turing+ Sponsors</h2>
-            <div class="sponsor">
-                <img src="logos/jane_street.png" alt="Jane Street Logo">
-                <p>Jane Street</p>
-                <p>Sponsor Since: 2024-2026</p>
+        <!-- cards are built by sponsors.js from /assets/data/sponsors.json -->
+        <section class="band band--blue sponsors-list">
+            <div class="container">
+                <h2 class="section-title">Turing+ Sponsors</h2>
+                <div id="turing-plus-sponsors" class="sponsor-cards"></div>
             </div>
         </section>
 
-        <section id="turing">
-            <h2>Turing Sponsors</h2>
-            <div class="sponsor">
-                <img src="logos/bam.png" alt="BAM Logo">
-                <p>BAM</p>
-                <p>Sponsor Since: 2024-2026</p>
-            </div>
-            <div class="sponsor">
-                <img src="logos/citadel.png" alt="Citadel Logo">
-                <p>Citadel</p>
-                <p>Sponsor Since: 2024-2026</p>
-            </div>
-            <div class="sponsor">
-                <img src="logos/hrt.png" alt="HRT Logo">
-                <p>HRT</p>
-                <p>Sponsor Since: 2024-2026</p>
-            </div>
-            <div class="sponsor">
-                <img src="logos/optiver.png" alt="Optiver Logo">
-                <p>Optiver</p>
-                <p>Sponsor Since: 2024-2026</p>
-            </div>
-            <div class="sponsor">
-                <img src="logos/roblox.png" alt="Roblox Logo">
-                <p>Roblox</p>
-                <p>Sponsor Since: 2024-2026</p>
-            </div>
-            <div class="sponsor">
-                <img src="logos/snowflake.png" alt="Snowflake Logo">
-                <p>Snowflake</p>
-                <p>Sponsor Since: 2024-2026</p>
-            </div>
-            <div class="sponsor">
-                <img src="logos/virtu.png" alt="Virtu Financial Logo">
-                <p>Virtu Financial</p>
-                <p>Sponsor Since: 2024-2026</p>
-            </div>
-            <div class="sponsor">
-                <img src="logos/deshaw.png" alt="D.E. Shaw Logo">
-                <p>The D.E. Shaw Group</p>
-                <p>Sponsor Since: 2025-2026</p>
+        <section class="band band--blue sponsors-list">
+            <div class="container">
+                <h2 class="section-title">Turing Sponsors</h2>
+                <div id="turing-sponsors" class="sponsor-cards"></div>
             </div>
         </section>
 
-        <section id="dijkstra">
-            <h2>Dijkstra Sponsors</h2>
-            <div class="sponsor">
-                <img src="logos/cloudflare.png" alt="Cloudflare Logo">
-                <p>Cloudflare</p>
-                <p>Sponsor Since: 2024-2026</p>
-            </div>
-            <div class="sponsor">
-                <img src="logos/bloomberg.png" alt="Bloomberg Logo">
-                <p>Bloomberg</p>
-                <p>Sponsor Since: 2024-2026</p>
+        <section class="band band--blue sponsors-list">
+            <div class="container">
+                <h2 class="section-title">Dijkstra Sponsors</h2>
+                <div id="dijkstra-sponsors" class="sponsor-cards"></div>
             </div>
         </section>
 
-        <section id="past-sponsors">
-            <h2>Past Sponsors</h2>
-            <div class="sponsor">
-                <img src="logos/datadog.png" alt="Datadog Logo">
-                <p>Datadog</p>
-                <p>Sponsor Since: 2024-2025</p>
+        <section class="band band--blue sponsors-list">
+            <div class="container">
+                <h2 class="section-title">Past Sponsors</h2>
+                <div id="past-sponsors" class="sponsor-cards"></div>
             </div>
-            <div class="sponsor">
-                <img src="logos/imc.png" alt="IMC Logo">
-                <p>IMC Trading</p>
-                <p>Sponsor Since: 2024-2025</p>
+        </section>
+
+        <section class="band band--navy interested">
+            <div class="interested__inner">
+                <h2 class="page-title">Interested?</h2>
+                <p>Please email: <a href="mailto:tssa@example.com">tssa@example.com</a></p>
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Turing Scholars</p>
-    </footer>
+
+    <script src="/sponsors/sponsors.js"></script>
 </body>
 </html>

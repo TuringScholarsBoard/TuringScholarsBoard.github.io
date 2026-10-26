@@ -1,42 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events | TSSA</title>
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="events.css">
-    <link rel="icon" href="icon.png" type="image/x-icon" />
-    <title>Events</title>
+    <script src="events.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects/projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="freshmen.html">Freshmen</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Upcoming Events</h1>
+  <nav class="nav" aria-label="Main navigation">
+        <a class="nav__logo" href="/index.html">
+            <img src="/assets/photos/tssa_sticker_blue.png" alt="TSSA logo">
+        </a>
+        <ul class="nav__links">
+            <li><a href= "/index.html">Home</a></li>
+            <li><a href="/about/about.html">About Us</a></li>
+            <li><a href="/TSSA/TSSA.html">TSSA</a></li>
+            <li><a href="/sponsors/sponsors.html">Sponsors</a></li>
+            <li><a href="/events/events.html" aria-current="page">Events</a></li>
+            <li><a href="/resources/resources.html">Resources</a></li>
+            <li><a href="/index.html#contact">Contact</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- hero image is set in events.css -->
+    <header class="page-header events-hero">
+        <div class="events-hero__inner">
+            <h1 class="page-title">Events</h1>
+            <p>The Turing Scholars Student Association (TSSA) hosts a variety of events throughout the year to bring our community together and connect students with new opportunities. These include social gatherings, corporate events, and research talks</p>
         </div>
     </header>
+
     <main>
+        <!-- upcoming events -->
+        <div class="band events-calendar">
+            <div class="container">
         <section class="calendar-container">
             <h2>Stay Updated with Our Latest Events</h2>
             <div class="calendar">
                 <iframe src="https://calendar.google.com/calendar/embed?src=fo87ne0d04rhfa9qcu078kdsdk%40group.calendar.google.com&ctz=America%2FDallas"
-                        style="border: 0" 
-                        width="100%" 
-                        height="600" 
-                        frameborder="0" 
+                        style="border: 0"
+                        width="100%"
+                        height="600"
+                        frameborder="0"
                         scrolling="no"></iframe>
             </div>
         </section>
+            </div>
+        </div>
+
+        <!-- past events are built from /assets/data/events.json -->
+        <section class="band band--navy events-past">
+            <div class="container container--narrow">
+                <h2 class="section-title">Past Events</h2>
+                <div class="event-grid" id="event-grid"></div>
+            </div>
+        </section>
+
+        <!-- more events -->
+        <section class="band more-events">
+            <div class="container">
+                <h2 class="section-title">More events?</h2>
+                <div class="more-events__grid">
+                    <div class="more-events__col">
+                        <h3>Host a Corporate Event</h3>
+                        <p>Email a corporate representative to schedule an event with our students.</p>
+                        <!-- TODO: replace with real contacts -->
+                        <ul class="contact-list">
+                            <li><a href="mailto:name@example.com">name@example.com</a></li>
+                            <li><a href="mailto:name@example.com">name@example.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="more-events__col">
+                        <h3>Suggest a Social Event</h3>
+                        <!-- TODO: replace the <p> with the Google Form <iframe> -->
+                        <div class="embed-slot" id="suggest-embed">
+                            <p>Embed here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- using native modal dialog to create the event popups -->
+    <dialog class="event-dialog" id="event-dialog" aria-labelledby="event-dialog-title">
+        <button class="event-dialog__close" type="button" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
+        <div class="event-dialog__panel">
+            <img class="event-dialog__header" alt="">
+            <div class="event-dialog__body">
+                <h2 class="section-title" id="event-dialog-title"></h2>
+                <p class="event-dialog__description"></p>
+                <div class="event-dialog__gallery"></div>
+            </div>
+        </div>
+    </dialog>
 </body>
 </html>

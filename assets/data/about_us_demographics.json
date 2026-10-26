@@ -1,0 +1,27 @@
+[
+    {
+        "id": "in-state",
+        "name": "In State",
+        "value": 41.7
+    },
+    {
+        "id": "east-coast",
+        "name": "East Coast",
+        "value": 22.6
+    },
+    {
+        "id": "west-coast",
+        "name": "West Coast",
+        "value": 23.9
+    },
+    {
+        "id": "mid-west",
+        "name": "Mid West",
+        "value": 10
+    },
+    {
+        "id": "international",
+        "name": "International",
+        "value": 1.8
+    }
+]

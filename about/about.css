@@ -1,90 +1,421 @@
-.board-grid {
+/* AI GENERATED cus CSS sucksss */
+
+body.home {
+  --ix-navy: #082e68;
+  --ix-nav-blue: #6593da;
+  --ix-band-blue: #4371b8;
+  --ix-faq-bar: #8ec3f0;
+  --ix-ink: #000;
+
+  --ix-font-title: "Lucidity Expand", "Arial Black", sans-serif;
+  --ix-font-section: "Roboto Mono", ui-monospace, monospace;
+  --ix-font-body: "Mina", Georgia, serif;
+
+  --ix-gutter: clamp(1.25rem, 6vw, 5rem);
+  --ix-content: 1100px;
+
+  margin: 0;
+}
+
+/* ---------- HERO ---------- */
+body.home main > section {
+  border-radius: 0;
+}
+
+body.home main > section:not(.stats) {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+body.home main > .hero {
+  min-height: calc(100vh - var(--nav-h, 3.6rem));
+  min-height: calc(100svh - var(--nav-h, 3.6rem));
+}
+
+body.home main > section h2,
+body.home main > section h3 {
+  color: #082e68;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 7rem var(--ix-gutter) 4rem;
+  overflow: hidden;
+  color: #fff;
+  background: #8c9bb8;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* navy overlay at 50% */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgb(8 46 104 / 50%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--ix-content);
+  margin: 0 auto;
+}
+
+.hero__title {
+  margin: 0 0 1rem;
+  font-family: var(--ix-font-title);
+  font-size: clamp(1.9rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.hero__text {
+  max-width: 34rem;
+  margin: 0;
+  font-family: var(--ix-font-body);
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  line-height: 1.6;
+}
+
+/* ---------- IMAGE + TEXT SECTIONS (At a Glance, Intramural Sports) ---------- */
+.feature {
+  background: #fff;
+  color: var(--ix-navy);
+  padding: clamp(3rem, 8vw, 6rem) var(--ix-gutter);
+}
+
+.feature__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  max-width: var(--ix-content);
+  margin: 0 auto;
+}
+
+.feature__grid--text-first {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+}
+
+.feature--text-right .feature__text {
+  text-align: right;
+}
+
+.feature__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.feature__title,
+.spread__title {
+  margin: 0 0 0.6rem;
+  color: var(--ix-ink);
+  font-family: var(--ix-font-section);
+  font-size: clamp(1.25rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.feature__desc {
+  margin: 0;
+  font-family: var(--ix-font-body);
+  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+  line-height: 1.6;
+}
+
+/* ---------- ALUMNI CAROUSELS ---------- */
+.alumni {
+  --ix-tile: clamp(80px, 10vw, 140px);
+  --ix-gap: clamp(24px, 3.3vw, 46px);
+
+  background: var(--ix-navy);
+  color: #fff;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+  overflow: hidden;
+}
+
+body.home main > section .alumni__title {
+  color: #fff;
+  margin: 0 var(--ix-gutter) clamp(1.5rem, 3vw, 2.5rem);
+  font-family: var(--ix-font-section);
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.alumni__rows {
+  display: grid;
+  gap: clamp(12px, 1.8vw, 24px);
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  width: max-content;
+  animation: carousel-left var(--duration, 40s) linear infinite;
+}
+
+.carousel--right .carousel__track {
+  animation-name: carousel-right;
+}
+
+/* One group = exactly half of the track, so -50% is a seamless loop. */
+.carousel__group {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--ix-gap);
+  padding-right: var(--ix-gap);
+}
+
+.logo-tile {
+  display: grid;
+  place-items: center;
+  flex: 0 0 var(--ix-tile);
+  width: var(--ix-tile);
+  height: var(--ix-tile);
+  padding: calc(var(--ix-tile) * 0.15);
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.logo-tile img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes carousel-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes carousel-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* ---------- TUITION / SCHOLARSHIP NUMBERS ---------- */
+.stats {
+  background: var(--ix-nav-blue);
+  color: var(--ix-ink);
+  padding: clamp(2rem, 5vw, 3.5rem) var(--ix-gutter);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 3vw, 2rem);
+  max-width: var(--ix-content);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat__label {
+  margin: 0 0 clamp(1rem, 2.5vw, 2rem);
+  font-family: var(--ix-font-section);
+  font-size: clamp(0.8rem, 1.6vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.stat__value {
+  margin: 0;
+  color: #fff;
+  font-family: var(--ix-font-section);
+  font-size: clamp(0.95rem, 2.6vw, 2rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- STUDENT SPREAD CHART ---------- */
+.spread {
+  background: #fff;
+  color: var(--ix-navy);
+  padding: clamp(3rem, 8vw, 6rem) var(--ix-gutter);
+}
+
+.spread__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  max-width: var(--ix-content);
+  margin: 0 auto;
+}
+
+.spread__text {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+}
+
+.spread__chart {
+    grid-column: 1;
+    grid-row: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5em;
-    max-width: 1000px;
-    margin: 0 auto 3em;
-    padding: 0 1em;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 3rem);
 }
+#student-chart { min-width: 0; width: 100%; max-width: 480px; }
+#student-chart svg { width: 100%; height: auto; display: block; }
 
-main h2 {
-    max-width: 1000px;
-    margin: 1.5em auto 0.5em;
-    padding: 0 1em;
-    font-size: 2.5em;
-    animation: fadeInUp 0.6s ease-out both;   /* adjust to taste */
-}
-
-.boardmember {
-    display: grid;
-    grid-template-columns: 175px 1fr;
-    column-gap: 16px;
-    background-color: white;
-    border: 1px solid #a0aab4;
-    border-radius: 20px;
-    padding: 1.2em;
-    animation: fadeInUp 0.6s ease-out both;
-}
-
-.boardmember img {
-    width: 175px;
-    height: 175px;
-    object-fit: cover;
-}
-
-.info {
+.spread__legend { list-style: none; margin: 0; padding: 0; }
+.spread__legend li {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;   /* name/title on top, grad/email at bottom */
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+    font-family: "Mina", sans-serif;
+    color: #082e68;
+}
+.spread__swatch { width: 1rem; height: 1rem; border-radius: 50%; flex: none; }
+.spread__pct { margin-left: auto; font-weight: 700; }
+
+/* ---------- FAQ (layout only) ---------- */
+.faq {
+  background: var(--ix-band-blue);
+  color: #fff;
+  padding: clamp(2rem, 5vw, 3.5rem) var(--ix-gutter);
 }
 
-.boardmember p,
-.boardmember h3 {
-    margin: 0;
+.faq__inner {
+  max-width: var(--ix-content);
+  margin: 0 auto;
 }
 
-.name {
-    font-size: 1.6em;
-    text-transform: uppercase;
+.faq__title {
+  margin: 0 0 1rem;
+  font-family: var(--ix-font-section);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
 }
 
-.title {
-    color: #9aa8b5;
-    font-weight: bold;
+.faq__item + .faq__item {
+  margin-top: 0.6rem;
 }
 
-.grad {
-    font-weight: bold;
+.faq__q {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--ix-faq-bar);
+  color: var(--ix-navy);
+  border-radius: 8px;
+  font-family: var(--ix-font-section);
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
 }
 
-.boardmember a {
-    color: black;
-    text-decoration: none;
-    word-break: break-all;
+.faq__chevron {
+  flex: 0 0 auto;
+  color: #fff;
 }
 
-.description {
-    grid-column: 1 / -1;              
-    margin-top: 0.8em !important;
+/* =========================================================
+   FADE IN + UP  (driven by index.js)
+   - [data-split] text is split into rendered lines (.fx-line)
+   - .fx-block fades the whole element (images, numbers, map)
+   - .reveal-group gets .is-visible when scrolled into view
+   ========================================================= */
+.js [data-split]:not(.is-split) {
+  visibility: hidden;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.fx-line {
+  display: block;
 }
 
-
-@media (max-width: 700px) {
-    .board-grid { grid-template-columns: 1fr; }
+.js .fx-line,
+.js .fx-block {
+  opacity: 0;
 }
 
-/* some people turn off animations on their OS *cough cough linux* so we add this flag */
+.reveal-group.is-visible .fx-line,
+.reveal-group.is-visible .fx-block {
+  animation: fx-up 0.6s ease-out both;
+  animation-delay: var(--d, 0s);
+}
+
+.reveal-group.is-visible .spread__chart {
+  animation-delay: 0s;
+}
+
+/* Used when lines are re-split on resize, so nothing replays. */
+.reveal-group.is-visible.is-static .fx-line {
+  opacity: 1;
+  animation: none;
+}
+
+@keyframes fx-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .boardmember { animation: none; }
+  .js .fx-line,
+  .js .fx-block {
+    opacity: 1;
+    animation: none !important;
+  }
+
+  .carousel__track {
+    animation: none;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 700px) {
+  .feature__grid,
+  .feature__grid--text-first,
+  .spread__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .feature__media {
+    order: -1;
+  }
+
+  .feature--text-right .feature__text {
+    text-align: left;
+  }
+
+  .spread__text {
+    grid-column: 1;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .spread__chart {
+    grid-row: 2;
+  }
+
 }

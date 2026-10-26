@@ -1,17 +1,41 @@
-This is the official turing scholars github. 
+# Turing Scholars Website
 
-To edit the github, submit a pull request. 
+This repository contains the official website for the Turing Scholars Program at the University of Texas at Austin.
 
+## Contributing
 
-Editing the data is very easy. Access the data folder and locate the corrosponding json file. 
+All changes to the website should be submitted through a pull request. Please ensure that your changes are tested and do not interfere with existing functionality before submitting them for review.
 
-Data is stored in json files for easy parsing and ease of editing. This way, we can modularize changing static data (sponsors, board members, etc.) versus dynamic data (component animations, color schema, etc.)
+## Editing Website Data
 
-There is a separate README in the data section that goes more in detail about each object's structure and how to correctly change the json parser
+Updating website content is straightforward. Navigate to the `/data` directory and locate the corresponding JSON file.
 
+Website content is stored in JSON files to simplify data management and separate content from presentation logic. This modular approach allows contributors to update static information, such as sponsors, board members, and events, without modifying the underlying JavaScript, animations, styling, or page layouts.
 
-Each page has a json parser dedicated to the designated object. 
+For detailed documentation on each JSON object's structure and instructions for updating the data, refer to the separate `README.md` located in the `/data` directory.
 
-PLEASE DO NOT MUTATE OBJECT STRUCTURE WITHOUT CHANGING THE JSON PARSER!
+### JSON Parsing
 
-Editing the formatting is more difficult
+Each page contains JavaScript responsible for parsing its corresponding JSON data and dynamically rendering the relevant content.
+
+**IMPORTANT: Do not modify the structure of a JSON object without updating its corresponding JavaScript parser.**
+
+Changing property names, removing required fields, or restructuring objects without updating the parser may cause website components to break or display incorrectly.
+
+When editing JSON files:
+
+- Preserve existing property names and object structures.
+- Follow the formatting and conventions established in the file.
+- Ensure that all required fields are included.
+- Validate your JSON syntax before submitting changes.
+- If structural changes are necessary, update and test the corresponding parser.
+
+## Editing Website Layout and Styling
+
+Modifying the website's appearance or functionality requires a greater understanding of its HTML, CSS, and JavaScript structure.
+
+Unlike content updates, changes to layouts, animations, components, or styling may affect multiple parts of the website. Contributors should review the relevant code and test their changes across different screen sizes before submitting a pull request.
+
+For consistency, please follow existing design conventions and reuse established styles and components whenever possible.
+
+In the utils section, there are images of each design used as reference when coding the website. Most of the CSS code is AI-Generated. 

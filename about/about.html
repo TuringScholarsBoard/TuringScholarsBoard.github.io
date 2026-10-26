@@ -1,42 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" href="icon.png" type="image/x-icon" />
-    <title>Contact</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us Turing Scholars Student Association</title>
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/about/about.css">
+  <link rel="icon" href="/icon.png" type="image/x-icon" />
+
+  <!-- using d3.js for the map loading -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
+  <script type="module" src="/about/about.js"></script>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects/projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="freshmen.html">Freshmen</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Contacts</h1>
+<body class="home">
+  <nav class="nav" aria-label="Main navigation">
+        <a class="nav__logo" href="/index.html">
+            <img src="/assets/photos/tssa_sticker_blue.png" alt="TSSA logo">
+        </a>
+        <ul class="nav__links">
+            <li><a href= "/index.html">Home</a></li>
+            <li><a href="/about/about.html" aria-current="page">About Us</a></li>
+            <li><a href="/TSSA/TSSA.html">TSSA</a></li>
+            <li><a href="/sponsors/sponsors.html">Sponsors</a></li>
+            <li><a href="/events/events.html">Events</a></li>
+            <li><a href="/resources/resources.html">Resources</a></li>
+            <li><a href="/index.html#contact">Contact</a></li>
+            
+        </ul>
+    </nav>
+
+  <main>
+
+    <section class="hero reveal-group" id="about">
+      <img class="hero__bg" src="/assets/photos/regular_photos/aboutus_hero.png" alt="">
+
+      <div class="hero__content">
+        <h1 class="hero__title" data-split>About Us</h1>
+        <p class="hero__text" data-split>
+          The Turing Scholars program, named after the mathematician Alan Turing, is an honors program for computer science majors at The University of Texas at Austin. The program, launched in the fall of 2002, admits no more than 50 students each year.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature feature--text-right reveal-group" id="at-a-glance">
+      <div class="feature__grid">
+        <figure class="feature__media split__figure fx-block">
+          <img src="/assets/photos/regular_photos/at_a_glance.jpg" alt="Turing Scholars students posing together">
+          <figcaption>Annual celebration after Turing's signature Assassins social event</figcaption>
+        </figure>
+
+        <div class="feature__text">
+          <h2 class="feature__title" data-split>At a Glance</h2>
+          <p class="feature__desc" data-split>The Turing Scholars Program fosters a close-knit community through small honors classes, faculty mentorship, undergraduate research, and student-organized events. Students complete a rigorous honors thesis while gaining valuable research and communication skills. Beyond academics, Turing Scholars benefit from exceptional career opportunities, including competitive internships, strong industry connections, and placement in top PhD programs.</p>
         </div>
-    </header>
-    <main>
-        <h2>Current Board Members</h2>
-        <div id="current-board" class="board-grid"></div>
+      </div>
+    </section>
 
-        <h2>Past Board Members</h2>
-        <div id="past-board" class="board-grid"></div>
-    </main>
+    <section class="alumni reveal-group" id="alumni">
+      <h2 class="alumni__title" data-split>Where our Alumni have worked</h2>
 
-    <!-- DO NOT EDIT THIS! PLEASE CHANGE THE SCRIPT ITSELF -->
-    <script src="contact.js"></script>
+      <div class="alumni__rows">
+        <div class="carousel carousel--left"  data-direction="left"  aria-label="Alumni employers, row 1">
+          <div class="carousel__track"></div>
+        </div>
+        <div class="carousel carousel--right" data-direction="right" aria-label="Alumni employers, row 2">
+          <div class="carousel__track"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature reveal-group" id="intramurals">
+      <div class="feature__grid feature__grid--text-first">
+        <div class="feature__text">
+          <h2 class="feature__title" data-split>Intramural Sports</h2>
+          <p class="feature__desc" data-split>Turing Scholars enjoy a vibrant social community through intramural sports, weekly events, and shared study spaces. From soccer and Ultimate Frisbee teams to collaborative study sessions in the Honors Quad and Gates Dell Complex, students have countless opportunities to connect, build friendships, and support one another beyond the classroom.</p>
+        </div>
+
+        <figure class="feature__media split__figure fx-block">
+          <img src="/assets/photos/regular_photos/sports.png" alt="Turing Scholars intramural team after a game">
+          <figcaption>Turing Scholars soccer intramural team after a game in 2019</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="stats reveal-group" id="stats">
+      <div class="stats__grid">
+        <div class="stat">
+          <h3 class="stat__label" data-split>Program Lifetime</h3>
+          <p class="stat__value fx-block" data-count="18" data-prefix="" data-suffix=" years">18 years</p>
+        </div>
+        <div class="stat">
+          <h3 class="stat__label" data-split>No. of Alumni</h3>
+          <p class="stat__value fx-block" data-count="1012" data-prefix="" data-suffix="">1012</p>
+        </div>
+        <div class="stat">
+          <h3 class="stat__label" data-split>% Receiving Scholarship</h3>
+          <p class="stat__value fx-block" data-count="60" data-prefix="" data-suffix="%">60%</p>
+        </div>
+      </div>
+    </section>
+
+  <section class="spread reveal-group" id="student-spread">
+    <div class="spread__grid">
+      <div class="spread__text">
+        <h2 class="spread__title" data-split>Student Spread</h2>
+        <p class="feature__desc" data-split>The Turing Scholars program brings together a diverse community of students from across the United States and around the world. Each year, our incoming class includes students from a wide range of geographic, cultural, and educational backgrounds, including several international students. Despite different backgrounds, students share a common curiosity and passion for computer science.</p>
+      </div>
+      <div class="spread__chart fx-block">
+        <div id="student-chart" role="img" aria-label="Pie chart showing where Turing Scholars students come from"></div>
+        <ul class="spread__legend" id="student-legend"></ul>
+      </div>
+    </div>
+  </section>
+
+        <!-- Not done -->
+    <section class="faq reveal-group" id="faq">
+      <div class="faq__inner">
+        <h2 class="faq__title" data-split>Frequently Asked Questions</h2>
+
+        <div class="faq__item fx-block">
+          <div class="faq__q">
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <polyline points="4,8 12,16 20,8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Question</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 </body>
-
 </html>

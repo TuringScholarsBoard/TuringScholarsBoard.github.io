@@ -1,25 +1,315 @@
+/* events.css: page styles for events.html (loads after ../styles.css) */
 
+/* ---------- HERO ---------- */
+.events-hero {
+    /* swap the hero photo here (path is relative to this css file) */
+    --hero-image: url("../assets/photos/regular_photos/events_hero.jpg");
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - var(--nav-h, 3.6rem));
+    min-height: calc(100svh - var(--nav-h, 3.6rem));
+    background:
+        linear-gradient(rgb(8 46 104 / 50%), rgb(8 46 104 / 50%)),
+        var(--hero-image) center / cover no-repeat,
+        var(--navy);
+}
 
-/* Calendar container styling */
-.calendar-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.events-hero__inner {
+    width: 100%;
+}
+
+.events-hero p {
+    max-width: 34rem;
+    margin-top: 0.75rem;
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+}
+
+/* ---------- UPCOMING EVENTS ---------- */
+.calendar-container h2,
+.more-events h3 {
+    margin: 0 0 1rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .calendar-container h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: clamp(1.25rem, 2.6vw, 1.75rem);
 }
 
-/* Calendar iframe styling */
-.calendar iframe {
-    border-radius: 8px;
+.calendar {
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(8 46 104 / 15%);
+}
+
+.calendar iframe {
+    display: block;
+}
+
+/* ---------- PAST EVENTS ---------- */
+.events-past {
+    text-align: left;
+}
+
+.container--narrow {
+    max-width: 56rem;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 2.5vw, 1.5rem);
+    margin-top: 1.5rem;
+}
+
+.event-grid__message {
+    grid-column: 1 / -1;
+}
+
+.event-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    padding: 0;
+    overflow: hidden;
+    color: var(--white);
+    text-align: left;
+    font: inherit;
+    background: var(--sponsors-blue);
+    border: 0;
+    cursor: pointer;
+}
+
+.event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.event-card:hover img {
+    transform: scale(1.04);
+}
+
+.event-card:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
+}
+
+/* Center the event name over its photo. */
+.event-card__name {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 0.7rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(0.8rem, 1.6vw, 1rem);
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    background: rgb(0 0 0 / 30%);
+}
+
+/* ---------- MORE EVENTS ---------- */
+.more-events {
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+.more-events__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    margin-top: 1.5rem;
+}
+
+.more-events h3 {
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+}
+
+.more-events p {
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+}
+
+.contact-list {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-list a {
+    color: var(--navy);
+}
+
+.embed-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20rem;
+    color: var(--white);
+    background: var(--button-teal);
+}
+
+.embed-slot iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 20rem;
+    border: 0;
+}
+
+/* ---------- POPUP ---------- */
+html:has(dialog[open]) {
+    overflow: hidden;
+}
+
+.event-dialog {
+    width: min(82vw, calc(100vw - 2rem));
+    height: 85vh;
+    height: 85svh;
+    max-height: calc(100svh - 2rem);
+    padding: 0;
+    overflow: hidden;
+    color: var(--navy);
+    background: var(--white);
+    border: 0;
+}
+
+.event-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    animation: popup-in 0.35s ease-out both;
+}
+
+@keyframes popup-in {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.event-dialog::backdrop {
+    background: rgb(0 0 0 / 50%);
+}
+
+.event-dialog__panel {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.event-dialog__header {
+    width: 100%;
+    height: clamp(16rem, 42svh, 32rem);
+    object-fit: cover;
+    background: var(--sponsors-blue);
+}
+
+.event-dialog__body {
+    padding: 1.25rem;
+}
+
+.event-dialog__description {
+    margin: 0.5rem 0 1.5rem;
+    white-space: pre-line;
+    font-size: 0.95rem;
+}
+
+.event-dialog__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.event-dialog__gallery img,
+.event-dialog__gallery > div {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.event-dialog__gallery > div {
+    background: rgb(8 46 104 / 8%);
+}
+
+/* white X, on a dark disc so it shows over bright photos */
+.event-dialog__close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    background: rgb(8 46 104 / 70%);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.event-dialog__close svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    stroke: var(--white);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+}
+
+.event-dialog__close:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 2px;
+}
+
+/* ---------- FADE IN AND UP (added by events.js) ---------- */
+.reveal-item,
+.reveal-card {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal-line {
+    display: block;
+}
+
+.is-visible .reveal-item,
+.reveal-item.is-visible,
+.reveal-card.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 640px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .more-events__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .event-dialog[open] {
+        animation: none;
+    }
+
+    .event-card img {
+        transition: none;
+    }
+
+    .event-card:hover img {
+        transform: none;
+    }
 }

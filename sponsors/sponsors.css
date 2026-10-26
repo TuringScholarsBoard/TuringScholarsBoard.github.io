@@ -1,21 +1,162 @@
-.sponsor {
+/* =========================================================
+   sponsors.css — SPONSORS PAGE ONLY
+   Shared styles live in styles.css, which must be linked first.
+   ========================================================= */
+
+/* ---------- HERO (white, centered, navy text) ---------- */
+.sponsors-hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    padding: 1em;
-    margin-bottom: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: clamp(2.5rem, 6vw, 4rem) var(--page-gutter);
+    text-align: center;
 }
 
-.sponsor img {
-    max-width: 150px;
-    margin-right: 1em;
-    max-height: 50px;
+.sponsors-hero .page-title {
+    margin-bottom: 0.75rem;
 }
 
-.sponsor p {
+.sponsors-hero p {
+    max-width: 26rem;
+    font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+    line-height: 1.5;
+}
+
+/* ---------- SPONSOR LIST (light blue band) ---------- */
+.sponsors-list {
+    background: var(--navbar-blue);
+    text-align: left;
+}
+
+/* keep the stacked cards a readable width, like the design */
+.sponsors-list .container {
+    max-width: 60rem;
+}
+
+.sponsors-list .section-title {
+    margin-bottom: 1rem;
+}
+
+.sponsor-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+/* ---------- CARD ---------- */
+.sponsor-card {
+    display: grid;
+    grid-template-columns: var(--logo-size) 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem;
+    color: var(--navy);
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px rgb(8 46 104 / 45%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    opacity: 0;                      /* hidden until it scrolls into view */
+    --logo-size: clamp(5rem, 14vw, 8.5rem);
+    text-decoration: none;
+}
+
+.sponsor-card.is-visible {
+    opacity: 1;
+    animation: fade-in-up 0.5s ease-out backwards;   /* delay is set by sponsors.js */
+}
+
+.sponsor-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 6px rgb(8 46 104 / 55%);
+}
+
+.sponsor-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.sponsor-card h3,
+.sponsor-card p {
     margin: 0;
-    font-size: 1.1em;
+}
+
+.sponsor-card__name {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.sponsor-card__tier {
+    margin-top: 0.15rem;
+    font-family: var(--font-heading);
+    font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+    color: var(--navbar-blue);
+}
+
+.sponsor-card__text {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #7b8ba3;
+}
+
+/* ---------- "INTERESTED?" (navy) ---------- */
+.interested {
+    min-height: clamp(14rem, 30vw, 22rem);
+}
+
+/* narrow block centered on the page, text left-aligned inside it */
+.interested__inner {
+    width: fit-content;
+    margin-inline: auto;
+    text-align: left;
+}
+
+.interested__inner .page-title {
+    margin-bottom: 0.75rem;
+}
+
+.interested__inner a {
+    color: var(--white);
+}
+
+/* ---------- LINE-BY-LINE TEXT FADE (sponsors.js) ---------- */
+.reveal-line {
+    display: block;
+}
+
+.reveal-item {
+    opacity: 0;
+}
+
+.is-visible .reveal-item {
+    animation: fade-in-up 0.4s ease-out both;
+    animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-item,
+    .sponsor-card {
+        opacity: 1;
+        animation: none !important;
+    }
+
+    .sponsor-card {
+        transition: none;
+    }
 }

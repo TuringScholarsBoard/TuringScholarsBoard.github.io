@@ -112,8 +112,8 @@ a:focus-visible {
     gap: 1rem;
     padding: 0.9rem var(--page-gutter);
     background-color: var(--navbar-blue);
-    border-radius: 0 0 1rem 1rem;
-    box-shadow: 0 0.4rem 0.25rem rgb(8 46 104 / 50%);
+    border-radius: 0;
+    box-shadow: 0 0.4rem 0.25rem rgb(96 96 96 / 50%);
 }
 
 .nav__logo {
@@ -142,13 +142,12 @@ a:focus-visible {
     color: var(--white);
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
 }
 
 /* current page: add aria-current="page" to its link */
 .nav__links a:hover,
 .nav__links a[aria-current="page"] {
-    border-bottom-color: var(--white);
+    font-weight: 700;
 }
 
 /* ---------- PAGE HEADER (inner pages: title banner under the nav) ---------- */

@@ -1,211 +1,246 @@
+
 [
     {
     "name": "Jane Street",
-    "logo": "/logos/jane_street.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/jane_street.png",
+    "sponsorship": "https://www.janestreet.com/",
     "tier": "Turing+",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-    ]
+    "description": "Jane Street is a close partner of the Turing Scholars honors program. As the leading global quantative trading company, TSSA is happy to work with Jane Street to host engaging corporate events with Turing Scholars.",
+    "current": true
     },
 
     {
     "name": "BAM",
-    "logo": "/logos/bam.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/bam.png",
+    "sponsorship": "https://www.bamfunds.com/",
     "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-
-    ]
-    },
-
-    {
-    "name": "Citadel",
-    "logo": "/logos/citadel.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
-    "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "BAM is a global multi-strategy investment management firm and a partner of the Turing Scholars honors program. TSSA is happy to work with BAM to support engaging corporate events and help Turing Scholars explore opportunities in investment management.",
+    "current": true
     },
 
     {
     "name": "HRT",
-    "logo": "/logos/hrt.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/hrt.png",
+    "sponsorship": "https://www.hudsonrivertrading.com/",
     "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "HRT is a quantitative trading firm specializing in algorithmic trading and a partner of the Turing Scholars honors program. TSSA is happy to work with HRT to support engaging corporate events and help Turing Scholars explore the role of computer science in trading.",
+    "current": true
     },
 
     {
     "name": "Citadel",
-    "logo": "/logos/citadel.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/citadel.png",
+    "sponsorship": "https://www.citadel.com/",
     "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "Citadel is a global alternative investment management firm and a partner of the Turing Scholars honors program. TSSA is happy to work with Citadel to support engaging corporate events and connect Turing Scholars with opportunities at the intersection of technology and finance.",
+    "current": true
     },
 
     {
     "name": "Optiver",
-    "logo": "/logos/optiver.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/optiver.png",
+    "sponsorship": "https://optiver.com/",
     "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "Optiver is a global market maker and proprietary trading firm and a partner of the Turing Scholars honors program. TSSA is happy to work with Optiver to support engaging corporate events and help Turing Scholars explore opportunities in trading and technology.",
+    "current": true
     },
 
     {
     "name": "Roblox",
-    "logo": "/logos/roblox.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/roblox.png",
+    "sponsorship": "https://www.roblox.com/",
     "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "Roblox is an online platform for creating and playing immersive experiences and a partner of the Turing Scholars honors program. TSSA is happy to work with Roblox to support engaging corporate events and help Turing Scholars explore opportunities in building interactive experiences.",
+    "current": true
     },
 
     {
     "name": "Snowflake",
-    "logo": "/logos/snowflake.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/snowflake.png",
+    "sponsorship": "https://www.snowflake.com/",
     "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "Snowflake is a cloud platform for data analytics, engineering, and AI and a partner of the Turing Scholars honors program. TSSA is happy to work with Snowflake to support engaging corporate events and help Turing Scholars explore opportunities in data and cloud technology.",
+    "current": true
     },
 
     {
     "name": "Virtu Financial",
-    "logo": "/logos/virtu.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/virtu.png",
+    "sponsorship": "https://www.virtu.com/",
     "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "Virtu Financial is a financial services firm specializing in market making and trading technology and a partner of the Turing Scholars honors program. TSSA is happy to work with Virtu Financial to support engaging corporate events and help Turing Scholars explore technology careers in financial markets.",
+    "current": true
     },
 
     {
     "name": "The D.E. Shaw Group",
-    "logo": "/logos/deshaw.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/deshaw.png",
+    "sponsorship": "https://www.deshaw.com/",
     "tier": "Turing",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "The D.E. Shaw Group is a global investment firm specializing in quantitative and systematic strategies and a partner of the Turing Scholars honors program. TSSA is happy to work with the D.E. Shaw Group to support engaging corporate events and help Turing Scholars explore opportunities in technology and quantitative research.",
+    "current": true
     },
 
     {
     "name": "Cloudflare",
-    "logo": "/logos/cloudflare.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/cloudflare.png",
+    "sponsorship": "https://www.cloudflare.com/",
     "tier": "Dijkstra",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "Cloudflare is a technology company providing internet security, networking, and performance services and a partner of the Turing Scholars honors program. TSSA is happy to work with Cloudflare to support engaging corporate events and help Turing Scholars explore opportunities in internet infrastructure and security.",
+    "current": true
     },
 
     {
     "name": "Bloomberg",
-    "logo": "/logos/bloomberg.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/bloomberg.png",
+    "sponsorship": "https://www.bloomberg.com/",
     "tier": "Dijkstra",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "Bloomberg is a global provider of financial data, analytics, news, and technology and a partner of the Turing Scholars honors program. TSSA is happy to work with Bloomberg to support engaging corporate events and help Turing Scholars explore opportunities in financial technology.",
+    "current": true
     },
 
     {
     "name": "Data Dog",
-    "logo": "/logos/datadog.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/datadog.png",
+    "sponsorship": "https://www.datadoghq.com/",
     "tier": "Past Sponsors",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "A cloud monitoring, security, and observability platform.",
+    "current": false
     },
 
     {
     "name": "IMC Trading",
-    "logo": "/logos/imc.png",
-    "sponsorship": {
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31"
-    },
+    "logo": "/assets/logos/imc.png",
+    "sponsorship": "https://www.imc.com/",
     "tier": "Past Sponsors",
-    "description": "",
-    "gallery": [
-        "/assets/sponsors/example-sponsor/gallery/photo-1.webp"
-        
-    ]
+    "description": "A global technology-driven trading and market-making firm.",
+    "current": false
+    },
+
+    {
+    "name": "Apple",
+    "logo": "/assets/logos/apple.png",
+    "sponsorship": "https://www.apple.com/",
+    "tier": "Past Sponsors",
+    "description": "A technology company developing consumer electronics, software, and digital services.",
+    "current": false
+    },
+
+        {
+    "name": "Lyft",
+    "logo": "/assets/logos/lyft.png",
+    "sponsorship": "https://www.lyft.com/",
+    "tier": "Past Sponsors",
+    "description": "A transportation platform connecting passengers with rides.",
+    "current": false
+    },
+
+    {
+    "name": "Dropbox",
+    "logo": "/assets/logos/dropbox.png",
+    "sponsorship": "https://www.dropbox.com/",
+    "tier": "Past Sponsors",
+    "description": "A cloud storage and file collaboration platform.",
+    "current": false
+    },
+
+    {
+    "name": "Indeed",
+    "logo": "/assets/logos/indeed.png",
+    "sponsorship": "https://www.indeed.com/",
+    "tier": "Past Sponsors",
+    "description": "An online employment platform connecting job seekers and employers.",
+    "current": false
+    },
+
+    {
+    "name": "Goldman Sachs",
+    "logo": "/assets/logos/goldman_sachs.png",
+    "sponsorship": "https://www.goldmansachs.com/",
+    "tier": "Past Sponsors",
+    "description": "A global investment banking, securities, and asset management firm.",
+    "current": false
+    },
+
+    {
+    "name": "Qualtrics",
+    "logo": "/assets/logos/qualtrics.png",
+    "sponsorship": "https://www.qualtrics.com/",
+    "tier": "Past Sponsors",
+    "description": "A software company specializing in customer and employee experience management.",
+    "current": false
+    },
+
+    {
+    "name": "Affirm",
+    "logo": "/assets/logos/affirm.png",
+    "sponsorship": "https://www.affirm.com/",
+    "tier": "Past Sponsors",
+    "description": "A financial technology company offering flexible payment solutions.",
+    "current": false
+    },
+
+    {
+    "name": "Iodine",
+    "logo": "/assets/logos/iodine.png",
+    "sponsorship": "https://www.iodinesoftware.com/",
+    "tier": "Past Sponsors",
+    "description": "A healthcare technology company using AI to improve clinical documentation.",
+    "current": false
+    },
+
+    {
+    "name": "DRW",
+    "logo": "/assets/logos/drw.png",
+    "sponsorship": "https://www.drw.com/",
+    "tier": "Turing",
+    "description": "DRW is a global proprietary trading firm using technology and quantitative research and a partner of the Turing Scholars honors program. TSSA is happy to work with DRW to support engaging corporate events and help Turing Scholars explore opportunities in trading, research, and software development.",
+    "current": true
+    },
+
+    {
+    "name": "Capital One",
+    "logo": "/assets/logos/capital_one.png",
+    "sponsorship": "https://www.capitalone.com/",
+    "tier": "Past Sponsors",
+    "description": "A financial services company offering banking, credit cards, and lending.",
+    "current": false
+    },
+
+    {
+    "name": "Airbnb",
+    "logo": "/assets/logos/airbnb.png",
+    "sponsorship": "https://www.airbnb.com/",
+    "tier": "Past Sponsors",
+    "description": "An online marketplace for short-term accommodations and travel experiences.",
+    "current": false
+    },
+
+    {
+    "name": "Meta",
+    "logo": "/assets/logos/meta.png",
+    "sponsorship": "https://www.meta.com/",
+    "tier": "Past Sponsors",
+    "description": "A technology company developing social platforms, AI, and virtual reality.",
+    "current": false
+    },
+
+    {
+    "name": "Oracle",
+    "logo": "/assets/logos/oracle.png",
+    "sponsorship": "https://www.oracle.com/",
+    "tier": "Past Sponsors",
+    "description": "A technology company providing database software, cloud infrastructure, and enterprise applications.",
+    "current": false
+    },
+
+    {
+    "name": "Quora",
+    "logo": "/assets/logos/quora.png",
+    "sponsorship": "https://www.quora.com/",
+    "tier": "Past Sponsors",
+    "description": "An online knowledge-sharing platform for questions and answers.",
+    "current": false
     }
 
     

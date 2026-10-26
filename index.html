@@ -20,15 +20,18 @@
 
     <!-- navbar -->
     <nav class="nav" aria-label="Main navigation">
-        <a class="nav__logo" href="index.html">
-            <!-- logo image -->
-            <img src="assets/photos/tssa_sticker_blue.png" alt="TSSA logo">
+        <a class="nav__logo" href="/index.html">
+            <img src="/assets/photos/tssa_sticker_blue.png" alt="TSSA logo">
         </a>
         <ul class="nav__links">
-            <li><a href="about/about.html">About Us</a></li>
-            <li><a href="sponsors/sponsors.html">Sponsors</a></li>
-            <li><a href="events/events.html">Events</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href= "/index.html" aria-current="page">Home</a></li>
+            <li><a href="/about/about.html">About Us</a></li>
+            <li><a href="/TSSA/TSSA.html">TSSA</a></li>
+            <li><a href="/sponsors/sponsors.html">Sponsors</a></li>
+            <li><a href="/events/events.html">Events</a></li>
+            <li><a href="/resources/resources.html">Resources</a></li>
+            <li><a href="/index.html#contact">Contact</a></li>
+            
         </ul>
     </nav>
 
@@ -62,13 +65,13 @@
                              college experience.</p>
                     </div>
                     <!-- about us button link -->
-                    <a class="btn" href="about/about.html">Learn More</a>
+                    <a class="btn" href="/about/about.html">Learn More</a>
                 </div>
 
                 <figure class="split__figure">
                     <!-- about image -->
-                    <img src="assets/photos/regular_photos/about_us.jpg" alt="2025 board members having Asian barbeque together">
-                    <figcaption>2025 Board members having asian barbeque together</figcaption>
+                    <img src="assets/photos/regular_photos/turing28.jpg" alt="Turing class of 2028 taking a photo together at the GDC">
+                    <figcaption>Turing class of 2028 taking a photo together at the GDC</figcaption>
                 </figure>
             </div>
         </section>
@@ -76,26 +79,50 @@
         <!-- sponsors section (tbd) -->
         <section id="sponsors" class="band band--blue sponsors">
             <div class="container">
+                
                 <h2 class="section-title">Our Sponsors</h2>
-                <p class="sponsors__subtitle">We are incredibly grateful for the support we recieve</p>
+                <p>We're incredibly thankful for the generous support of our sponsors and partners, who help make our events, programs, and opportunities possible.</p>
 
-                <div class="sponsors__grid">
-                    <!-- SPONSOR 1: change href to the sponsor's site and src to their logo -->
-                    <a class="sponsor-card" href="#" target="_blank" rel="noopener">
-                        <img src="assets/images/sponsor-1.png" alt="Sponsor 1 logo">
-                    </a>
-                    <!-- SPONSOR 2 -->
-                    <a class="sponsor-card" href="#" target="_blank" rel="noopener">
-                        <img src="assets/images/sponsor-2.png" alt="Sponsor 2 logo">
-                    </a>
-                    <!-- SPONSOR 3 -->
-                    <a class="sponsor-card" href="#" target="_blank" rel="noopener">
-                        <img src="assets/images/sponsor-3.png" alt="Sponsor 3 logo">
-                    </a>
+                <div class="carousel">
+                    <div class="carousel-track">
+                    
+                        <!-- sponsors here are not dynamically loaded, they're
+                         in a traditional html carousel so if a sponsor is added or not
+                         you will have to change it here -->
+                         <!-- to be changed maybe -->
+                    <div class="logo-group">
+                        <img src="assets/logos/bam.png" alt="Sponsor 1">
+                        <img src="assets/logos/bloomberg.png" alt="Sponsor 2">
+                        <img src="assets/logos/citadel.png" alt="Sponsor 3">
+                        <img src="assets/logos/jane_street.png" alt="Sponsor 4">
+                        <img src="assets/logos/deshaw.png" alt="Sponsor 5">
+                        <img src="assets/logos/hrt.png" alt="Sponsor 6">
+                        <img src="assets/logos/optiver.png" alt="Sponsor 7">
+                        <img src="assets/logos/roblox.png" alt="Sponsor 8">
+                        <img src="assets/logos/virtu.png" alt="Sponsor 9">
+                        <img src="assets/logos/snowflake.png" alt="Sponsor 10">
+                    </div>
+
+                    <!-- duplicate for seamless transition -->
+                    <div class="logo-group" aria-hidden="true">
+                        <img src="assets/logos/bam.png" alt="Sponsor 1">
+                        <img src="assets/logos/bloomberg.png" alt="Sponsor 2">
+                        <img src="assets/logos/citadel.png" alt="Sponsor 3">
+                        <img src="assets/logos/jane_street.png" alt="Sponsor 4">
+                        <img src="assets/logos/deshaw.png" alt="Sponsor 5">
+                        <img src="assets/logos/hrt.png" alt="Sponsor 6">
+                        <img src="assets/logos/optiver.png" alt="Sponsor 7">
+                        <img src="assets/logos/roblox.png" alt="Sponsor 8">
+                        <img src="assets/logos/virtu.png" alt="Sponsor 9">
+                        <img src="assets/logos/snowflake.png" alt="Sponsor 10">
+                    </div>
+
+                    </div>
                 </div>
+                
 
                 <!-- sponsors button link -->
-                <a class="btn btn--light" href="sponsors/sponsors.html">Learn More</a>
+                <a class="btn btn--light" href="/sponsors/sponsors.html">Learn More</a>
             </div>
         </section>
 
@@ -105,7 +132,7 @@
                 <figure class="split__figure">
                     <!-- events image link -->
                     <img src="assets/photos/regular_photos/events.png" alt="Turing Scholars kayaking on the river">
-                    <figcaption>2026 Turing scholars enjoy our annual Kayaking kickoff</figcaption>
+                    <figcaption>Turing scholars enjoy our annual Kayaking kickoff in 2026</figcaption>
                 </figure>
 
                 <div class="split__text">

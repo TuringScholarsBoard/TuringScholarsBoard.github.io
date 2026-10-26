@@ -1,0 +1,199 @@
+/* =========================================================
+   about.css — ABOUT US PAGE ONLY
+   Shared styles (fonts, colors, nav, bands, buttons, split)
+   live in styles.css, which must be linked before this file.
+   ========================================================= */
+
+:root {
+    --title-color: #6d84a3;                 /* position text on the cards */
+    --card-border: rgb(8 46 104 / 25%);     /* card outline */
+    --headshot-size: clamp(6rem, 12vw, 10.5rem);
+}
+
+/* ---------- NAVY INTRO BANNER ---------- */
+/* fills the screen under the sticky navbar (--nav-h = navbar height) */
+.about-hero {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - var(--nav-h, 3.6rem));
+    min-height: calc(100svh - var(--nav-h, 3.6rem));
+    background-image: linear-gradient(rgb(8 46 104 / 50%), rgb(8 46 104 / 50%)), url("/assets/photos/regular_photos/TSSA_hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-hero > .container {
+    width: 100%;
+}
+
+/* width: min-content stacks the title one word per line ("ABOUT / US").
+   Font size comes from .page-title in styles.css, same as the homepage title. */
+.about-hero__title {
+    width: min-content;
+    margin: 0 0 0.75rem;
+}
+
+.about-hero__text {
+    max-width: 22rem;
+    font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+    line-height: 1.5;
+}
+
+/* same section-title spacing as the homepage */
+.band .section-title {
+    margin-bottom: 1.25rem;
+}
+
+/* ---------- BOARD MEMBERS ---------- */
+.board-group + .board-group {
+    margin-top: 3.5rem;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+    margin-top: 1rem;
+}
+
+.boardmember {
+    display: grid;
+    grid-template-columns: var(--headshot-size) 1fr;
+    column-gap: 1rem;
+    align-content: start;
+    padding: 1rem;
+    color: var(--navy);
+    background: var(--white);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.boardmember img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.boardmember .split__figure figcaption {
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   /* name/title on top, grad/email at bottom */
+    min-width: 0;
+}
+
+.boardmember p,
+.boardmember h3 {
+    margin: 0;
+}
+
+.name {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 0.15rem;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--title-color);
+}
+
+.grad {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+}
+
+.boardmember a {
+    font-size: 0.85rem;
+    color: var(--navy);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.boardmember a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- OFFICE BAND (blue, photo left / text right) ---------- */
+.office .split {
+    grid-template-columns: 2fr 1fr;
+    align-items: stretch;
+}
+
+.office .split__figure img {
+    aspect-ratio: 3 / 2;
+    border-radius: 1.5rem;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- LINE-BY-LINE TEXT FADE (fade-lines.js) ----------
+   same classes and animation as the homepage */
+.reveal-line {
+    display: block;
+}
+
+.reveal-item {
+    opacity: 0;
+}
+
+.is-visible .reveal-item {
+    animation: fade-in-up 0.4s ease-out both;
+    animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 700px) {
+    .board-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    /* base .split already stacks; this undoes the 2:1 columns above */
+    .office .split {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* some people turn off animations on their OS *cough cough linux* so we add this flag */
+@media (prefers-reduced-motion: reduce) {
+    .boardmember {
+        animation: none;
+    }
+
+    .reveal-item {
+        opacity: 1;
+        animation: none !important;
+    }
+}

@@ -1,32 +1,46 @@
 [
     {
     "name": "Kayaking Social",
-    "location": "Texas Rowing Center",
-    "address": "1541 W Cesar Chavez St, Austin, TX 78703",
     "description": "Description",
-    "gallery": [
-        "/photos/event_gallery/"
-    ]
+    "gallery": "/assets/photos/event_gallery/kayaking/"
     },
 
     {
-    "name": "Poker Social",
-    "location": "Gates Dell Complex",
-    "address": "2317 Speedway, Austin, TX 78712",
+    "name": "Nerf War",
     "description": "Description",
-    "gallery": [
-        "/photos/event_gallery/"
-    ]
+    "gallery": "/assets/photos/event_gallery/nerf_war/"
+    },
+
+    
+    {
+    "name": "Banquet",
+    "description": "Description",
+    "gallery": "/assets/photos/event_gallery/banquet/"
     },
 
     {
-    "name": "Lightning Talks",
-    "location": "Gates Dell Complex",
-    "address": "2317 Speedway, Austin, TX 78712",
+    "name": "Assassins",
     "description": "Description",
-    "gallery": [
-        "/photos/event_gallery/"
-    ]
+    "gallery":"/assets/photos/event_gallery/assassins/"
+
+    },
+
+    {
+    "name": "Jane Street Event",
+    "description": "Description",
+    "gallery": "/assets/photos/event_gallery/jane_street/"
+    },
+
+    {
+    "name": "Snowflake Event",
+    "description": "Description",
+    "gallery": "/assets/photos/event_gallery/snowflake/"
+    },
+
+    {
+    "name": "HRT Corporate Event",
+    "description": "Description",
+    "gallery": "/assets/photos/event_gallery/hrt/"
     }
 
 ]
