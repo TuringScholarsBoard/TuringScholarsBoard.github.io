@@ -294,7 +294,7 @@ body.home main > section .alumni__title {
 .spread__swatch { width: 1rem; height: 1rem; border-radius: 50%; flex: none; }
 .spread__pct { margin-left: auto; font-weight: 700; }
 
-/* ---------- FAQ (layout only) ---------- */
+/* ---------- EXPANDABLE FAQ ---------- */
 .faq {
   background: var(--ix-band-blue);
   color: #fff;
@@ -313,25 +313,76 @@ body.home main > section .alumni__title {
   font-weight: 700;
 }
 
+.faq__item {
+  background: var(--ix-faq-bar);
+  color: var(--ix-navy);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .faq__item + .faq__item {
   margin-top: 0.6rem;
 }
 
 .faq__q {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.6rem 0.9rem;
   background: var(--ix-faq-bar);
   color: var(--ix-navy);
-  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(8 46 104 / 25%);
   font-family: var(--ix-font-section);
   font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  cursor: pointer;
+  list-style: none;
 }
 
-.faq__chevron {
+.faq__q::-webkit-details-marker {
+  display: none;
+}
+
+.faq__q::before {
+  content: "";
   flex: 0 0 auto;
-  color: #fff;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.faq__item:not([data-faq-animated])[open] > .faq__q::before,
+.faq__q[aria-expanded="true"]::before {
+  transform: rotate(45deg);
+}
+
+.faq__q:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
+.faq__answer {
+  overflow: hidden;
+  line-height: 1.65;
+}
+
+.faq__answer p {
+  padding: 1rem 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__q::before {
+    transition: none;
+  }
+}
+
+.faq__answer a {
+  color: inherit;
+  text-underline-offset: 0.2em;
 }
 
 /* =========================================================

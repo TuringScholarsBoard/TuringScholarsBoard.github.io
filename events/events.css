@@ -1,9 +1,12 @@
+/* There is no documentation on how to change the CSS files to be better. These things are
+beasts of god that should not be tampered with... just paste the whole thing into an LLM and pray
+Why did nobody install tailwind? */
 /* events.css: page styles for events.html (loads after ../styles.css) */
 
 /* ---------- HERO ---------- */
 .events-hero {
     /* swap the hero photo here (path is relative to this css file) */
-    --hero-image: url("../assets/photos/regular_photos/events_hero.jpg");
+    --hero-image: url("../assets/photos/hero_photos/events_hero.jpg");
     display: flex;
     align-items: center;
     min-height: calc(100vh - var(--nav-h, 3.6rem));
@@ -150,13 +153,13 @@
     align-items: center;
     justify-content: center;
     min-height: 20rem;
-    color: var(--white);
-    background: var(--button-teal);
+    color: var(--navy);
+    background: #dce9fa;
 }
 
 .embed-slot iframe {
     width: 100%;
-    height: 100%;
+    height: 720px;
     min-height: 20rem;
     border: 0;
 }

@@ -1,0 +1,28 @@
+/* There is no documentation on how to change the CSS files to be better. These things are
+beasts of god that should not be tampered with... just paste the whole thing into an LLM and pray
+Why did nobody install tailwind? */
+
+/* Austin guide. Loads after resources.css. */
+
+.guide-hero {
+    --hero-image: url("../assets/photos/regular_photos/austin_hero.jpg");
+}
+
+/* transportation links: name on one line, cost/notes underneath */
+.guide-links {
+    padding-left: 0;
+    list-style: none;
+}
+
+.guide-links li {
+    margin-bottom: 0.9rem;
+}
+
+.guide-links a {
+    font-family: "Roboto Mono", ui-monospace, monospace;
+    font-weight: 700;
+}
+
+.guide-note {
+    display: block;
+}

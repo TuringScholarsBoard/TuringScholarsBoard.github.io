@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us Turing Scholars Student Association</title>
+  <title>About Us</title>
   <script>document.documentElement.classList.add("js");</script>
 
   <link rel="stylesheet" href="/styles.css">
@@ -14,6 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
   <script type="module" src="/about/about.js"></script>
+  <script src="/about/faq.js" defer></script>
 </head>
 
 <body class="home">
@@ -36,12 +37,12 @@
   <main>
 
     <section class="hero reveal-group" id="about">
-      <img class="hero__bg" src="/assets/photos/regular_photos/aboutus_hero.png" alt="">
+      <img class="hero__bg" src="/assets/photos/hero_photos/aboutus_hero.jpeg" alt="">
 
       <div class="hero__content">
         <h1 class="hero__title" data-split>About Us</h1>
         <p class="hero__text" data-split>
-          The Turing Scholars program, named after the mathematician Alan Turing, is an honors program for computer science majors at The University of Texas at Austin. The program, launched in the fall of 2002, admits no more than 50 students each year.
+          The Turing Scholars program, named after the mathematician Alan Turing, is an honors program for computer science majors at The University of Texas at Austin. The program, launched in the fall of 2002, admits roughly 50 students each year.
         </p>
       </div>
     </section>
@@ -117,19 +118,58 @@
     </div>
   </section>
 
-        <!-- Not done -->
     <section class="faq reveal-group" id="faq">
       <div class="faq__inner">
         <h2 class="faq__title" data-split>Frequently Asked Questions</h2>
 
-        <div class="faq__item fx-block">
-          <div class="faq__q">
-            <svg class="faq__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <polyline points="4,8 12,16 20,8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Question</span>
+        <details class="faq__item fx-block">
+          <summary class="faq__q">Can I participate in the Turing Scholars Honors Program and also in one of the other Honors programs at UT, such as Dean's Scholars or Plan II?</summary>
+          <div class="faq__answer">
+            <p>Yes. You are free to apply to as many Honors programs as fit your needs. We have many students who are participating in two honors programs and have even had some participate in three. Note that some honors programs will require you to double-major.</p>
           </div>
-        </div>
+        </details>
+
+        <details class="faq__item fx-block">
+          <summary class="faq__q">Can I double major in CS and some other major if I join the Turing Scholars Honors Program?</summary>
+          <div class="faq__answer">
+            <p>Yes. A significant fraction of our Turing Scholars choose to double major in any of a variety of subjects, including German, Chinese, Chemistry, Biology, Business, Math, Physics, Electrical &amp; Computer Engineering, Music, and Plan II.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fx-block">
+          <summary class="faq__q">What's the difference between Turing and CSB?</summary>
+          <div class="faq__answer">
+            <p><a href="https://csb.utexas.edu/">CSB</a> is a separate honors degree program for students interested in both Business and Computer Science. CSB students essentially double-major in both Business and CS.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fx-block">
+          <summary class="faq__q">If I am a Turing Scholars student, must I take all of the honors classes?</summary>
+          <div class="faq__answer">
+            <p>No. If you are admitted to the Turing Scholars Honors Program as a first year student, you will be expected to take the special sections of the first year classes. After that, you may take whatever courses you choose. However, there is a minimum number of honors classes that you must complete in order to graduate as a Turing Scholar.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fx-block">
+          <summary class="faq__q">What kind of students do well in the Turing Scholars program?</summary>
+          <div class="faq__answer">
+            <p>We're looking for students who are committed and hardworking, with a strong math and science background, and students who are open to challenging courses where they don’t always have the answer right in front of them.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fx-block">
+          <summary class="faq__q">What is TSSA?</summary>
+          <div class="faq__answer">
+            <p>TSSA is the <a href="https://app.notion.com/p/7deb664c74504bc2a929a10bb72adcc4?pvs=21">Turing Scholars Student Association</a>, a student led organization built around the Turing Scholars program that organizes corporate, social, and research events for the Turing Scholars community. Every admitted Turing Scholar is automatically a member of this student organization.</p>
+          </div>
+        </details>
+
+        <details class="faq__item fx-block">
+          <summary class="faq__q">Can I, a current UTCS student, transfer into Turing?</summary>
+          <div class="faq__answer">
+            <p>Yes. You may apply for admission to the Turing Scholars Honors Program by submitting an <a href="https://utexas.qualtrics.com/SE/?SID=SV_6roHP2CPrgWJtmR">online application</a>, and then emailing a resume to the address on the online application. Applications are accepted towards the end of each semester. Successful applicants will be placed in honors courses as appropriate for their background.</p>
+          </div>
+        </details>
       </div>
     </section>
 

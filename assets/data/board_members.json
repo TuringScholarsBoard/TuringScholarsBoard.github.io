@@ -1,9 +1,9 @@
 [
     {
     "position": "President",
-    "name": "Michael Peng",
-    "email": "jane.doe@example.com",
-    "headshot": "/assets/photos/board_headshots/ella_whitney.jpeg",
+    "name": "Michael Zheng",
+    "email": "michaelpengenzheng@utexas.edu",
+    "headshot": "/assets/photos/board_headshots/michael_zheng.jpg",
     "description": "Description",
     "graduatingYear": 2026,
     "current": true
@@ -12,7 +12,7 @@
     {
     "position": "Corporate Representative",
     "name": "Joyce Zheng",
-    "email": "jane.doe@example.com",
+    "email": "joycezhengxzh@utexas.edu",
     "headshot": "/assets/photos/board_headshots/joyce_zheng.jpeg",
     "description": "Description",
     "graduatingYear": 2028,
@@ -56,6 +56,15 @@
     "headshot": "/assets/photos/board_headshots/harshal_bharatia.jpeg",
     "description": "Description",
     "graduatingYear": 2027,
+    "current": true
+    },
+    {
+    "position": "Freshman Representative",
+    "name": "Katherine Zhang",
+    "email": "kazzhi@utexas.edu",
+    "headshot": "/assets/photos/board_headshots/katherine_zhang.jpg",
+    "description": "Description",
+    "graduatingYear": 2030,
     "current": true
     }
 

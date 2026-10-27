@@ -1,9 +1,13 @@
+/* There is no documentation on how to change the CSS files to be better. These things are
+beasts of god that should not be tampered with... just paste the whole thing into an LLM and pray
+Why did nobody install tailwind? */
+
 /* =========================================================
    sponsors.css — SPONSORS PAGE ONLY
    Shared styles live in styles.css, which must be linked first.
    ========================================================= */
 
-/* ---------- HERO (white, centered, navy text) ---------- */
+/* ---------- HERO ---------- */
 .sponsors-hero {
     display: flex;
     flex-direction: column;
@@ -13,6 +17,11 @@
     min-height: 100svh;
     padding: clamp(2.5rem, 6vw, 4rem) var(--page-gutter);
     text-align: center;
+    color: var(--white);
+    background:
+        linear-gradient(rgb(8 46 104 / 50%), rgb(8 46 104 / 50%)),
+        url("../assets/photos/hero_photos/sponsors_hero.png") center / cover no-repeat,
+        var(--navy);
 }
 
 .sponsors-hero .page-title {

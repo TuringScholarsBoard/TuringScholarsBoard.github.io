@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    
+    <title>Resource Guides</title>
     <link rel="icon" href="/icon.png" type="image/x-icon" />
-    <title>Freshmen</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="resources.css">
 </head>
-<body>
-    <header>
-        <nav class="nav" aria-label="Main navigation">
+<body class="guide guide--fullscreen">
+    <nav class="nav" aria-label="Main navigation">
         <a class="nav__logo" href="/index.html">
             <img src="/assets/photos/tssa_sticker_blue.png" alt="TSSA logo">
         </a>
@@ -25,34 +25,30 @@
             
         </ul>
     </nav>
-        <div class="hero">
-            <h1>How to: Freshmen</h1>
-        </div>
-    </header>
     <main>
-        <div class="section">
-            <p>Freshman year can be challenging! Here are some resources you may find helpful.</p>
-        </div>
-        <div class="section">
-            <div class="box">
-                <a href="howtofreshman/recruitment.html">How To: Recruitment</a>
+        <section class="guide-hero guide-hero--resources">
+            <div class="guide-hero__inner">
+                <h1 class="guide-hero__title">Resource Guides</h1>
+                <p class="guide-hero__subtitle">Help fellow Turing Scholars by sharing your advice on recruiting, Austin, and student life. Contribute on GitHub to improve these guides, suggest updates, or add new resources.</p>
+                <a class="btn btn--light guide-btn" href="https://github.com/TuringScholarsBoard/TuringScholarsBoard.github.io">Contribute on GitHub</a>
             </div>
-        </div>
-        <div class="section">
-            <div class="box">
-                <a href="howtofreshman/research.html">How To: Research</a>
+        </section>
+        <section class="guide-band guide-band--white" id="recruitment">
+            <div class="guide-band__inner">
+                <h2 class="guide-band__title">Recruitment</h2>
+                <p class="guide-band__lead">Curious about recruitment for internships? This guide includes a sample timeline, resume advice, interview prep, and freshman programs. Although the guide specifically helps freshmen in Turing, we hope it offers good advice to anyone looking for help. </p>
+                <a class="btn guide-btn" href="recruitment.html">Read the recruitment guide</a>
             </div>
-        </div>
-        <div class="section">
-            <div class="box">
-                <a href="howtofreshman/entrepreneurship.html">How To: Entrepreneurship</a>
+        </section>
+        <section class="guide-band guide-band--blue guide-band--right" id="austin">
+            <div class="guide-band__inner">
+                <h2 class="guide-band__title">Austin</h2>
+                <p class="guide-band__lead">Austin is a big city, filled with amazing places to see and explore. TSSA believes in Turing Scholars getting to know their home city better. This guide features housing, transportation, campus, and places to explore around the city. This guide is for anyone, even if you're from Austin yourself!</p>
+                <a class="btn btn--light guide-btn" href="austin.html">Read the Austin guide</a>
             </div>
-        </div>
-        <div class="section">
-            <div class="box">
-                <a href="howtofreshman/austin.html">How To: Austin</a>
-            </div>
-        </div>
+        </section>
+
     </main>
+    <script src="resources.js" defer></script>
 </body>
 </html>

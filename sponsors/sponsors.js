@@ -1,12 +1,15 @@
-// Current sponsors have a section for each tier; cards keep the JSON order.
+// current sponsors have a section for each tier 
+// cards keep the JSON order cus json stores list order
 const TIER_SECTIONS = {
     "turing+": "turing-plus-sponsors",
     "turing": "turing-sponsors",
     "dijkstra": "dijkstra-sponsors"
 };
-const STAGGER = 0.1;   // seconds between cards / lines
 
-// run something when elements scroll into view (elements that appear together are staggered)
+// seconds between lines
+const STAGGER = 0.1;   
+
+// run something when elements scroll into view (elements that appear together have a slight delay)
 function whenVisible(elements, show) {
     const observer = new IntersectionObserver(entries => {
         entries.filter(entry => entry.isIntersecting).forEach((entry, i) => {
@@ -18,7 +21,7 @@ function whenVisible(elements, show) {
     elements.forEach(el => observer.observe(el));
 }
 
-// an empty line is skipped, so blank fields in the JSON don't leave gaps
+// an empty line is skipped so blank fields in the json don't leave gaps
 function line(className, text) {
     return text ? `<p class="${className}">${text}</p>` : "";
 }
@@ -65,7 +68,7 @@ fetch("/assets/data/sponsors.json", { cache: "no-store" })
     .catch(error => console.error("Could not load sponsors.json:", error));
 
 
-
+// copied basically from index.js
 // any element with data-lines is split into the lines it is actually displayed on
 // and each line fades in one after another. 
 function splitIntoLines(el) {

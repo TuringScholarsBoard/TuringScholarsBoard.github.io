@@ -1,4 +1,3 @@
-//index.js
 
 // the banner folder contains 1.webp through 50.webp, please change length manually
 const bannerPhotos = Array.from({ length: 50 }, (_, index) =>
@@ -19,7 +18,7 @@ let currentPhoto = firstFrame.getAttribute('src');
 let nextPhoto = null;
 
 /*
-Preload the next photo while the current photo is displayed to minimize loading time
+preload the next photo while the current photo is displayed to minimize loading time
 */
 function preloadNextPhoto() {
     const candidates = bannerPhotos.filter(photo => photo !== currentPhoto);
@@ -111,7 +110,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
             return rank(a) - rank(b);
         });
         for (const item of ordered) {
-            const parts = item.matches('h1, h2, p, figcaption') ? splitLines(item) : [item];
+            const parts = item.matches('h1, h2, p, figcaption') && !item.querySelector('a') ? splitLines(item) : [item];
             for (const part of parts) {
                 part.classList.add('reveal-item');
 

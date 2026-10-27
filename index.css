@@ -195,6 +195,11 @@ main > .band .section-title {
 }
 
 /* ---------- CONTACT ---------- */
+.contact a {
+    color: inherit;
+    text-underline-offset: 0.2em;
+}
+
 .contact__content {
     margin-top: 2rem;
 }

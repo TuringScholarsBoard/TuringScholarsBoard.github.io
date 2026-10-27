@@ -1,41 +1,39 @@
 # Turing Scholars Website
 
-This repository contains the official website for the Turing Scholars Program at the University of Texas at Austin.
+The official website for the Turing Scholars Program at the University of Texas at Austin.
 
 ## Contributing
 
-All changes to the website should be submitted through a pull request. Please ensure that your changes are tested and do not interfere with existing functionality before submitting them for review.
+Submit all changes through a pull request. Before you open one, test your changes and make sure they don't break existing functionality.
 
 ## Editing Website Data
 
-Updating website content is straightforward. Navigate to the `/data` directory and locate the corresponding JSON file.
+Website content like sponsors, board members, and events is stored in JSON files in the `/data` directory. This keeps content separate from the code, so you can update it without touching the JavaScript, animations, styling, or page layouts.
 
-Website content is stored in JSON files to simplify data management and separate content from presentation logic. This modular approach allows contributors to update static information, such as sponsors, board members, and events, without modifying the underlying JavaScript, animations, styling, or page layouts.
-
-For detailed documentation on each JSON object's structure and instructions for updating the data, refer to the separate `README.md` located in the `/data` directory.
+To update content, find the matching JSON file and edit it. The `README.md` in the `/assets` directory documents the structure of each JSON object and how to update it.
 
 ### JSON Parsing
 
-Each page contains JavaScript responsible for parsing its corresponding JSON data and dynamically rendering the relevant content.
+Each page has JavaScript that reads its JSON data and renders the content on the page.
 
-**IMPORTANT: Do not modify the structure of a JSON object without updating its corresponding JavaScript parser.**
-
-Changing property names, removing required fields, or restructuring objects without updating the parser may cause website components to break or display incorrectly.
+**Important: if you change the structure of a JSON object, you must update its JavaScript parser too.** Renaming properties, removing required fields, or restructuring objects without updating the parser can break components or make them display incorrectly.
 
 When editing JSON files:
 
-- Preserve existing property names and object structures.
-- Follow the formatting and conventions established in the file.
-- Ensure that all required fields are included.
-- Validate your JSON syntax before submitting changes.
-- If structural changes are necessary, update and test the corresponding parser.
+- Keep the existing property names and object structures.
+- Follow the formatting and conventions already used in the file.
+- Include all required fields.
+- Check that your JSON syntax is valid before submitting.
+- If you need to change the structure, update and test the parser as well.
 
-## Editing Website Layout and Styling
+## Editing Layout and Styling
 
-Modifying the website's appearance or functionality requires a greater understanding of its HTML, CSS, and JavaScript structure.
+Changing the site's appearance or behavior takes more familiarity with its HTML, CSS, and JavaScript. Layout, animation, component, and style changes can affect several parts of the site, so review the relevant code and test at different screen sizes before submitting a pull request.
 
-Unlike content updates, changes to layouts, animations, components, or styling may affect multiple parts of the website. Contributors should review the relevant code and test their changes across different screen sizes before submitting a pull request.
+Follow the existing design conventions and reuse existing styles and components where you can. `styles.css` is the main stylesheet. Check it before making any major design change that affects the whole site.
 
-For consistency, please follow existing design conventions and reuse established styles and components whenever possible.
+The utils folder has images of each design, which were used as references when building the site. Most of the CSS was AI-generated.
 
-In the utils section, there are images of each design used as reference when coding the website. Most of the CSS code is AI-Generated. 
+## Contact
+
+This website was built and last updated by Katherine Zhang (Turing class of 2030). For questions, email katherinezhang2236@gmail.com.

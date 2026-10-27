@@ -1,46 +1,38 @@
+
 [
-    {
+  {
     "name": "Kayaking Social",
-    "description": "Description",
+    "description": "Turing Scholars take a break from classes and coding to spend a relaxing day kayaking on the water! This outdoor social is a great opportunity to enjoy Austin's scenery, unwind from the semester, and get to know fellow Turing Scholars outside the classroom. Whether paddling alongside friends or making new ones, it's a fun way to build friendships and enjoy time together.",
     "gallery": "/assets/photos/event_gallery/kayaking/"
-    },
-
-    {
+  },
+  {
     "name": "Nerf War",
-    "description": "Description",
+    "description": "Get ready for some friendly competition as Turing Scholars face off in an action-packed Nerf War! Students put their strategy, teamwork, and quick reflexes to the test while competing against friends in exciting battles. With plenty of opportunities for unexpected alliances, clever tactics, and memorable moments, Nerf War is a fun way to bring the Turing community together outside of academics.",
     "gallery": "/assets/photos/event_gallery/nerf_war/"
-    },
-
-    
-    {
+  },
+  {
     "name": "Banquet",
-    "description": "Description",
+    "description": "The Turing Scholars Banquet brings students together to celebrate another memorable semester of academic achievements, friendships, and community. It's an opportunity to step away from coursework, enjoy a meal with fellow scholars, and reflect on shared experiences throughout the year. From reconnecting with friends to celebrating the people who make Turing special, the banquet highlights the close-knit community at the heart of the program.",
     "gallery": "/assets/photos/event_gallery/banquet/"
-    },
-
-    {
+  },
+  {
     "name": "Assassins",
-    "description": "Description",
-    "gallery":"/assets/photos/event_gallery/assassins/"
-
-    },
-
-    {
+    "description": "Assassins is a Turing-wide game of strategy, stealth, and suspense that turns everyday campus life into a friendly competition. Players are assigned targets and must find creative ways to eliminate them while staying alert to opponents who may be hunting them in return. With unexpected encounters, shifting strategies, and plenty of surprises, Assassins brings excitement and friendly rivalry to the Turing community. Trust no one!",
+    "gallery": "/assets/photos/event_gallery/assassins/"
+  },
+  {
     "name": "Jane Street Event",
-    "description": "Description",
+    "description": "Turing Scholars connect with Jane Street, a leading quantitative trading firm, for an opportunity to explore the intersection of computer science, mathematics, and financial markets. Through conversations with industry professionals, students gain insight into the technical challenges, problem-solving approaches, and career paths found in quantitative trading and software engineering. The event offers a chance to learn about the industry, ask questions, and build connections beyond the classroom.",
     "gallery": "/assets/photos/event_gallery/jane_street/"
-    },
-
-    {
+  },
+  {
     "name": "Snowflake Event",
-    "description": "Description",
+    "description": "Turing Scholars connect with Snowflake, a cloud data and AI company, to explore the technologies powering modern data infrastructure and large-scale computing. The event provides an opportunity to learn about real-world applications of computer science, discover career paths in software engineering and data technology, and engage with professionals working in the industry. Students can gain valuable perspectives on how technical concepts learned in class translate into practical challenges at a major technology company.",
     "gallery": "/assets/photos/event_gallery/snowflake/"
-    },
-
-    {
+  },
+  {
     "name": "HRT Corporate Event",
-    "description": "Description",
+    "description": "Turing Scholars connect with Hudson River Trading (HRT), a quantitative trading firm that combines advanced mathematics, computer science, and engineering to tackle complex problems in financial markets. Students have the opportunity to learn about the technical work behind algorithmic trading, explore careers in quantitative research and software engineering, and connect with professionals in the field. The event offers insight into how computational thinking and innovative technology are applied in a fast-paced, highly technical industry.",
     "gallery": "/assets/photos/event_gallery/hrt/"
-    }
-
+  }
 ]

@@ -1,3 +1,8 @@
+/* There is no documentation on how to change the CSS files to be better. These things are
+beasts of god that should not be tampered with... just paste the whole thing into an LLM and pray
+Why did nobody install tailwind? */
+
+
 /* =========================================================
    about.css — ABOUT US PAGE ONLY
    Shared styles (fonts, colors, nav, bands, buttons, split)
@@ -17,7 +22,7 @@
     align-items: center;
     min-height: calc(100vh - var(--nav-h, 3.6rem));
     min-height: calc(100svh - var(--nav-h, 3.6rem));
-    background-image: linear-gradient(rgb(8 46 104 / 50%), rgb(8 46 104 / 50%)), url("/assets/photos/regular_photos/TSSA_hero.webp");
+    background-image: linear-gradient(rgb(8 46 104 / 50%), rgb(8 46 104 / 50%)), url("/assets/photos/hero_photos/TSSA_hero.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -22,7 +22,7 @@
     "name": "HRT",
     "logo": "/assets/logos/hrt.png",
     "sponsorship": "https://www.hudsonrivertrading.com/",
-    "tier": "Turing",
+    "tier": "Turing+",
     "description": "HRT is a quantitative trading firm specializing in algorithmic trading and a partner of the Turing Scholars honors program. TSSA is happy to work with HRT to support engaging corporate events and help Turing Scholars explore the role of computer science in trading.",
     "current": true
     },
@@ -51,7 +51,7 @@
     "sponsorship": "https://www.roblox.com/",
     "tier": "Turing",
     "description": "Roblox is an online platform for creating and playing immersive experiences and a partner of the Turing Scholars honors program. TSSA is happy to work with Roblox to support engaging corporate events and help Turing Scholars explore opportunities in building interactive experiences.",
-    "current": true
+    "current": false
     },
 
     {

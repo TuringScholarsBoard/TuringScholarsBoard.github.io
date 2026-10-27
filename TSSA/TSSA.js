@@ -1,4 +1,4 @@
-// Keep the hero within the space below the navbar, including when links wrap.
+// keep the hero within the space below the navbar, including when links wrap.
 const nav = document.querySelector(".nav");
 const updateNavHeight = () => {
     document.documentElement.style.setProperty("--nav-h", `${nav.getBoundingClientRect().height}px`);
@@ -40,7 +40,7 @@ fetch("/assets/data/board_members.json", { cache: "no-store" })
 
 // any element with data-lines is split into the lines it is actually displayed on
 // and each line fades in one after another when it scrolls into view.
-const LINE_STEP = 0.1;   // seconds between lines
+const LINE_STEP = 0.1;   
 
 function splitIntoLines(el) {
     const words = el.textContent.trim().split(/\s+/);

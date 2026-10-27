@@ -1,3 +1,5 @@
+const GALLERY_PHOTO_COUNT = 6; // maximum gallery photos per popup excluding the header
+
 // fit the hero below the navbar including when navigation links wrap
 const nav = document.querySelector('.nav');
 const updateNavHeight = () => {
@@ -26,8 +28,8 @@ let activeEvent = null;
 /* 
    browsers can't list a folder so this tries, in order:
    1. an optional "images": ["a.jpg", ...] list on the event in events.json
-   2. header.jpg plus 1.jpg to 6.jpg (also .jpeg, .png, .webp) 
-   3. if it doesn't work it just selects ranomly 6 images from the directory*/
+   If neither provides images, probe header.jpg and numbered photos from 1
+   through GALLERY_PHOTO_COUNT (also .jpeg, .png, .webp). */
    
 function folderUrl(path) {
     const clean = SITE_ROOT + path.replace(/^\/+/, '');
@@ -58,7 +60,7 @@ async function listFolder(folder) {
 
 async function probeFolder(folder) {
     const header = (await canLoad(`${folder}header.jpg`)) ? [`${folder}header.jpg`] : [];
-    const numbered = await Promise.all([1, 2, 3, 4, 5, 6].map(async n => {
+    const numbered = await Promise.all(Array.from({ length: GALLERY_PHOTO_COUNT }, (_, i) => i + 1).map(async n => {
         for (const ext of ['jpg', 'jpeg', 'png', 'webp']) {
             if (await canLoad(`${folder}${n}.${ext}`)) return `${folder}${n}.${ext}`;
         }
@@ -76,7 +78,7 @@ function getMedia(event) {
         const rest = files.filter(file => !HEADER_RE.test(file));
         return {
             header: files.find(file => HEADER_RE.test(file)) || rest[0] || `${folder}header.jpg`,
-            gallery: rest.slice(0, 6)
+            gallery: rest.slice(0, GALLERY_PHOTO_COUNT)
         };
     })();
     return event.media;
@@ -135,7 +137,7 @@ function openEvent(event, cardImg) {
     dialogTitle.textContent = event.name;
     dialogText.textContent = event.description || '';
     dialogHeader.src = cardImg.currentSrc || cardImg.src;
-    dialogGallery.replaceChildren(...Array.from({ length: 6 }, () => document.createElement('div')));
+    dialogGallery.replaceChildren(...Array.from({ length: GALLERY_PHOTO_COUNT }, () => document.createElement('div')));
     dialog.showModal();
     dialog.querySelector('.event-dialog__panel').scrollTop = 0;
 
