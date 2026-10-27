@@ -43,20 +43,24 @@ const canLoad = url => new Promise(resolve => {
     img.src = url;
 });
 
+
 async function listFolder(folder) {
     try {
-        const response = await fetch(folder);
-        if (!response.ok) return [];
-        const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
-        return [...doc.querySelectorAll('a[href]')]
-            .map(a => a.getAttribute('href'))
-            .filter(href => IMAGE_RE.test(href))
-            .map(href => new URL(href, folder).href)
-            .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
-    } catch {
+        const response = await fetch(folder + "manifest.json");
+
+        if (!response.ok) {
+            throw new Error(`Cannot load manifest: ${response.status}`);
+        }
+
+        const files = await response.json();
+
+        return files.map(name => new URL(name, folder).href);
+    } catch (error) {
+        console.error("Gallery loading failed:", folder, error);
         return [];
     }
 }
+
 
 async function probeFolder(folder) {
     const header = (await canLoad(`${folder}header.jpg`)) ? [`${folder}header.jpg`] : [];
