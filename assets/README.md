@@ -144,3 +144,60 @@ The questions are in `about/about.html` inside the section with `id="faq"`. Each
 To edit a question, change the `summary` text. To edit an answer, change the paragraph inside `faq__answer`. Add links with `<a href="https://example.com/">link text</a>`. To add a question, copy a whole `details` block and fill it in. To remove one, delete its whole `details` block. Questions appear in the order they are listed.
 
 Keep the class names so the arrows, expanding blue boxes, and animations keep working. `about/faq.js` opens and closes each question separately, so several can stay open at once. The styles are in `about/about.css`. Normal question and answer changes don't need edits to either file.
+
+
+## 5. Debugging
+
+### Event Gallery and Alumni Images Not Loading
+
+**Issue:** Images in the Events popups or About Us alumni carousel are missing, even though the image files exist in their respective folders.
+
+**Cause:** GitHub Pages does not support automatic directory listings. JavaScript cannot discover which images exist in a folder by fetching the folder URL. As a result, the website requires a `manifest.json` file containing the filenames of the images to display.
+
+**Solution:** Use the Python manifest-generation script to automatically create or update the `manifest.json` files.
+
+#### Step 1: Add Images
+
+Place new images in the appropriate directory:
+
+- **Event galleries:** `assets/photos/event_gallery/event_name/`
+- **Alumni logos:** `assets/logos/alumni/`
+
+Images can have any filename, such as `IMG_1234.jpg`, `group_photo.png`, or `company_logo.webp`. They do not need to be numbered.
+
+For event galleries, include a `header.jpg` image to serve as the event card and popup header.
+
+#### Step 2: Generate or Update Manifests
+
+From the project's root directory, run:
+
+```bash
+python generate_manifests.py
+```
+
+The script scans the configured image directories and creates or updates their `manifest.json` files.
+
+For example, an event gallery might contain:
+
+```text
+event_gallery/
+└── kayaking/
+    ├── header.jpg
+    ├── IMG_1234.jpg
+    ├── group_photo.png
+    └── manifest.json
+```
+
+The corresponding `manifest.json` would contain:
+
+```json
+[
+    "header.jpg",
+    "IMG_1234.jpg",
+    "group_photo.png"
+]
+```
+
+Refresh the page with `Ctrl + Shift + R` to bypass cached files.
+
+**Note:** The Python script does not run automatically on GitHub Pages. Whenever images are added, renamed, or removed, rerun the script and commit the updated manifests. Also, the script must be configured to scan both event galleries and alumni logos if both are managed through this workflow.
