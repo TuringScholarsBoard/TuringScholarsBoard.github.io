@@ -87,6 +87,19 @@ main > .band .section-title {
     margin-bottom: 1.25rem;
 }
 
+#events .split__text p {
+    text-align: right;
+}
+
+#events .split__text p + p {
+    margin-top: 1rem;
+}
+
+/* Let paragraph text wrap naturally instead of fixing each animated line. */
+#events .split__text p .reveal-line {
+    display: inline;
+}
+
 #events .split__text > .btn {
     width: 100%;
 }

@@ -227,9 +227,9 @@ async function initAlumni() {
 
     // split the images in half: first half on top, second half below
     // (empty white tiles are shown if no images are found)
-    const half = Math.ceil(files.length / 2);
+    const third = Math.ceil(files.length / 3);
     const rows = files.length
-        ? [files.slice(0, half), files.slice(half)]
+        ? [files.slice(0, third), files.slice(third, third * 2), files.slice(third * 2)]
         : [Array(8).fill(null), Array(8).fill(null)];
 
     // a single logo can't be split in two rows
